@@ -16,6 +16,9 @@ class Site(models.Model):
     
 class Element(models.Model):
     bone_name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.bone_names
     # bone_img = models.ImageField(upload_to='boneImages')
     
 class Landmark(models.Model):
@@ -24,6 +27,7 @@ class Landmark(models.Model):
     
     def __str__(self):
         return self.landmark_name
+    
 # note: still have to add spit/accno/person IDs
 # spit may have to be another model
 
