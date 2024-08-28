@@ -2,10 +2,6 @@
 
 For backend ONLY
 
-```Bash
-cd backend
-```
-
 Create virtual environment in directory with:
 
 ```bash
@@ -16,10 +12,6 @@ Activate virtual environment:
 
 ```Bash
 source env/Scripts/activate
-```
-
-```cmd
-env\Scripts\activate.bat
 ```
 
 Install dependencies with:
