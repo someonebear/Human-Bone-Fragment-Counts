@@ -14,20 +14,27 @@ class Site(models.Model):
     city = models.CharField(max_length=90)
     country = models.CharField(max_length=30)
     description = models.CharField(max_length=2000)
-    
-class Element(models.Model):
-    bone_name = models.CharField(max_length=20)
 
     def __str__(self):
-        return self.bone_names
+        return f'{self.site_name} - {self.city}, {self.country}'
+        
+    
+class Element(models.Model):
+    element_name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.element_name
     # bone_img = models.ImageField(upload_to='boneImages')
     
 class Landmark(models.Model):
+    # e.g. FIB-1 for the head of the fibula
+    landmark_id = models.CharField(max_length=20, primary_key=True)
+    # Common name - e.g. "head", not "caput fibulae"
     landmark_name = models.CharField(max_length=100)
     bone = models.ForeignKey(Element, on_delete=models.CASCADE)
     
     def __str__(self):
-        return self.landmark_name
+        return f'{self.landmark_name} - {self.bone.element_name}'
     
 # note: still have to add spit/accno/person IDs
 # spit may have to be another model
