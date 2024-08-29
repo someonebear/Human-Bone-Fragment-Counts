@@ -16,7 +16,6 @@ class ElementSerializer(serializers.ModelSerializer):
 class LandmarkSerializer(serializers.ModelSerializer):
     bone_name = serializers.CharField(source='bone.name')
     landmark_name = serializers.CharField(source='name')
-    landmark_id = serializers.CharField(source='id')
 
     class Meta:
         model = Landmark
