@@ -31,10 +31,10 @@ class Landmark(models.Model):
     id = models.CharField(max_length=20, primary_key=True)
     # Common name - e.g. "head", not "caput fibulae"
     name = models.CharField(max_length=100)
-    bone = models.ForeignKey(Element, on_delete=models.CASCADE)
+    bone = models.ForeignKey(Element, related_name='landmarks', on_delete=models.CASCADE)
     
     def __str__(self):
-        return f'{self.name} - {self.bone.name}'
+        return f'{self.id} - {self.name}'
     
 # note: still have to add spit/accno/person IDs
 # spit may have to be another model
