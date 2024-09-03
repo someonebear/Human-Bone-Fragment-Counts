@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator
-
 # Create your models here.
 # class User(models.Model):
 #     first_name = models.CharField(max_length=60)
@@ -21,10 +20,18 @@ class Site(models.Model):
 
 
 class Element(models.Model):
-    name = models.CharField(max_length=20, unique=True)
+    name = models.CharField(max_length=20)
+    # For big bones like the cranium with multiple parts and duplicate landmarks
+    secondary = models.CharField(max_length=50, blank=True)
 
     def __str__(self):
+        if self.secondary != "":
+            return f'{self.name} - {self.secondary}'
         return self.name
+
+    class Meta:
+        models.UniqueConstraint(
+            fields=['name', 'secondary'], name='unique_bone')
     # bone_img = models.ImageField(upload_to='boneImages')
 
 
