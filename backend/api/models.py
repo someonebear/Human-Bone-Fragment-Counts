@@ -59,10 +59,11 @@ class Entry(models.Model):
     class Age(models.TextChoices):
         INFANT = "Infant"
         CHILD = "Child"
-        # TODO INFANT CHILD ADOLECSCENT YOUNG ADULT ADULT MATURE ADULT NOT APPLICABLE
         ADOLESCENT = "Adolescent"
-        SKEL_MAT = "Skeletally Mature", "Skeletally Mature"
-        MAT_AD = "Mature Adult", "Mature Adult"
+        YOUNG_ADULT = "Young Adult"
+        ADULT = "ADULT"
+        MAT_ADULT = "Mature Adult", "Mature Adult"
+        NA = "Not Applicable", "Not Applicable"
 
     class Sex(models.TextChoices):
         FEMALE = "Female"
@@ -78,6 +79,8 @@ class Entry(models.Model):
 
     # site = models.ForeignKey(Site, on_delete=models.RESTRICT)
     # logged_by = models.ForeignKey(User, on_delete=models.RESTRICT)
+    # TODO regex validator for this acc_num field
+    acc_num = models.CharField(max_length=50)
     bone = models.ForeignKey(Element, on_delete=models.RESTRICT)
     side = models.CharField(choices=Side, max_length=20)
     age = models.CharField(choices=Age, max_length=50)
@@ -85,7 +88,7 @@ class Entry(models.Model):
     size = models.CharField(choices=Size, max_length=50)
     generic = models.BooleanField(default=False)
     complete = models.PositiveIntegerField(validators=[MaxValueValidator(100)])
-    notes = models.CharField(max_length=2000, blank=True)
+    notes = models.TextField(max_length=2000, blank=True)
 
     # landmarks = models.ManyToManyField(Landmark, through="IDLandmarks")
     landmarks = models.ManyToManyField(Landmark)
