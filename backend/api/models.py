@@ -20,7 +20,7 @@ class Site(models.Model):
 
 
 class Element(models.Model):
-    name = models.CharField(max_length=20)
+    name = models.CharField(max_length=50)
     # For big bones like the cranium with multiple parts and duplicate landmarks
     secondary = models.CharField(max_length=50, blank=True)
 
@@ -59,6 +59,7 @@ class Entry(models.Model):
     class Age(models.TextChoices):
         INFANT = "Infant"
         CHILD = "Child"
+        # TODO INFANT CHILD ADOLECSCENT YOUNG ADULT ADULT MATURE ADULT NOT APPLICABLE
         ADOLESCENT = "Adolescent"
         SKEL_MAT = "Skeletally Mature", "Skeletally Mature"
         MAT_AD = "Mature Adult", "Mature Adult"

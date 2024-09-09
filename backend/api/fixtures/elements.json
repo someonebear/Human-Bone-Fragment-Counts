@@ -1,0 +1,207 @@
+[
+  {
+    "model": "api.element",
+    "pk": 1,
+    "fields": { "name": "Frontal", "secondary": "Cranium" }
+  },
+  {
+    "model": "api.element",
+    "pk": 2,
+    "fields": { "name": "Parietal", "secondary": "Cranium" }
+  },
+  {
+    "model": "api.element",
+    "pk": 3,
+    "fields": { "name": "Temporal", "secondary": "Cranium" }
+  },
+  {
+    "model": "api.element",
+    "pk": 4,
+    "fields": { "name": "Occipital", "secondary": "Cranium" }
+  },
+  {
+    "model": "api.element",
+    "pk": 5,
+    "fields": { "name": "Maxilla", "secondary": "Cranium" }
+  },
+  {
+    "model": "api.element",
+    "pk": 6,
+    "fields": { "name": "Zygomatic", "secondary": "Cranium" }
+  },
+  {
+    "model": "api.element",
+    "pk": 7,
+    "fields": { "name": "Sphenoid", "secondary": "Cranium" }
+  },
+  {
+    "model": "api.element",
+    "pk": 8,
+    "fields": { "name": "Miscellaneous", "secondary": "Cranium" }
+  },
+  {
+    "model": "api.element",
+    "pk": 9,
+    "fields": { "name": "Lacrimal", "secondary": "Cranium" }
+  },
+  {
+    "model": "api.element",
+    "pk": 10,
+    "fields": { "name": "Palatine", "secondary": "Cranium" }
+  },
+  {
+    "model": "api.element",
+    "pk": 11,
+    "fields": { "name": "Inferior nasal concha", "secondary": "Cranium" }
+  },
+  {
+    "model": "api.element",
+    "pk": 12,
+    "fields": { "name": "Vomer", "secondary": "Cranium" }
+  },
+  {
+    "model": "api.element",
+    "pk": 13,
+    "fields": { "name": "Ethmoid", "secondary": "Cranium" }
+  },
+  {
+    "model": "api.element",
+    "pk": 14,
+    "fields": { "name": "Hyoid", "secondary": "Cranium" }
+  },
+  {
+    "model": "api.element",
+    "pk": 15,
+    "fields": { "name": "Alveolar", "secondary": "" }
+  },
+  {
+    "model": "api.element",
+    "pk": 16,
+    "fields": { "name": "Mandible", "secondary": "" }
+  },
+  {
+    "model": "api.element",
+    "pk": 17,
+    "fields": { "name": "Atlas", "secondary": "" }
+  },
+  {
+    "model": "api.element",
+    "pk": 18,
+    "fields": { "name": "Axis", "secondary": "" }
+  },
+  {
+    "model": "api.element",
+    "pk": 19,
+    "fields": { "name": "First Rib", "secondary": "" }
+  },
+  {
+    "model": "api.element",
+    "pk": 20,
+    "fields": { "name": "Sternum", "secondary": "" }
+  },
+  {
+    "model": "api.element",
+    "pk": 21,
+    "fields": { "name": "Clavicle", "secondary": "" }
+  },
+  {
+    "model": "api.element",
+    "pk": 22,
+    "fields": { "name": "Scapula", "secondary": "" }
+  },
+  {
+    "model": "api.element",
+    "pk": 23,
+    "fields": { "name": "Humerus", "secondary": "" }
+  },
+  {
+    "model": "api.element",
+    "pk": 24,
+    "fields": { "name": "Radius", "secondary": "" }
+  },
+  {
+    "model": "api.element",
+    "pk": 25,
+    "fields": { "name": "Ulna", "secondary": "" }
+  },
+  {
+    "model": "api.element",
+    "pk": 26,
+    "fields": { "name": "Carpal", "secondary": "Hand" }
+  },
+  {
+    "model": "api.element",
+    "pk": 27,
+    "fields": { "name": "Metacarpal", "secondary": "Hand" }
+  },
+  {
+    "model": "api.element",
+    "pk": 28,
+    "fields": { "name": "Pelvis", "secondary": "" }
+  },
+  {
+    "model": "api.element",
+    "pk": 29,
+    "fields": { "name": "Sacrum", "secondary": "" }
+  },
+  {
+    "model": "api.element",
+    "pk": 30,
+    "fields": { "name": "Femur", "secondary": "" }
+  },
+  {
+    "model": "api.element",
+    "pk": 31,
+    "fields": { "name": "Tibia", "secondary": "" }
+  },
+  {
+    "model": "api.element",
+    "pk": 32,
+    "fields": { "name": "Fibula", "secondary": "" }
+  },
+  {
+    "model": "api.element",
+    "pk": 33,
+    "fields": { "name": "Patella", "secondary": "" }
+  },
+  {
+    "model": "api.element",
+    "pk": 34,
+    "fields": { "name": "Foot", "secondary": "" }
+  },
+  {
+    "model": "api.element",
+    "pk": 35,
+    "fields": { "name": "Talus", "secondary": "Foot" }
+  },
+  {
+    "model": "api.element",
+    "pk": 36,
+    "fields": { "name": "Calcaneus", "secondary": "Foot" }
+  },
+  {
+    "model": "api.element",
+    "pk": 37,
+    "fields": { "name": "MT1", "secondary": "Foot" }
+  },
+  {
+    "model": "api.element",
+    "pk": 38,
+    "fields": { "name": "MT2", "secondary": "Foot" }
+  },
+  {
+    "model": "api.element",
+    "pk": 39,
+    "fields": { "name": "MT3", "secondary": "Foot" }
+  },
+  {
+    "model": "api.element",
+    "pk": 40,
+    "fields": { "name": "MT4", "secondary": "Foot" }
+  },
+  {
+    "model": "api.element",
+    "pk": 41,
+    "fields": { "name": "MT5", "secondary": "Foot" }
+  }
+]
