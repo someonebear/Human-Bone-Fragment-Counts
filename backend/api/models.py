@@ -61,7 +61,7 @@ class Entry(models.Model):
         CHILD = "Child"
         ADOLESCENT = "Adolescent"
         YOUNG_ADULT = "Young Adult"
-        ADULT = "ADULT"
+        ADULT = "Adult"
         MAT_ADULT = "Mature Adult", "Mature Adult"
         NA = "Not Applicable", "Not Applicable"
 
@@ -82,6 +82,7 @@ class Entry(models.Model):
     # TODO regex validator for this acc_num field
     acc_num = models.CharField(max_length=50)
     bone = models.ForeignKey(Element, on_delete=models.RESTRICT)
+    # TODO Add default as unsided
     side = models.CharField(choices=Side, max_length=20)
     age = models.CharField(choices=Age, max_length=50)
     sex = models.CharField(choices=Sex, max_length=50)
