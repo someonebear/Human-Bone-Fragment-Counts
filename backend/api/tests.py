@@ -28,6 +28,8 @@ class EntryTestCase(TestCase):
             "/auth/users/", {"username": "testuser", "password": "unCOMMON1234", "re_password": "unCOMMON1234"},)
         call_command('loaddata', 'elements')
         call_command('loaddata', 'landmarks')
+        call_command('loaddata', 'sites')
+        call_command('loaddata', 'spits')
 
     def test_create_entryGroup_entry(self):
         response = self.client.post(
@@ -37,12 +39,13 @@ class EntryTestCase(TestCase):
             "acc_num": 1,
             "sex": "Female",
             "age": "Infant",
-            "entry_type": "Individual"
+            "entry_type": "Individual",
+            "site": 1,
+            "spit": 1
         }
         response = self.client.post(
             "/entry-groups/", json.dumps(entryGroup), headers={"Authorization": f"Token {token}"}, content_type="application/json")
         self.assertEqual(response.status_code, 201)
-
         entry = {
             "acc_num": 1,
             "bone": 1,

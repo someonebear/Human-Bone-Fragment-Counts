@@ -34,4 +34,4 @@ class EntryGroupSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = EntryGroup
-        fields = ['acc_num', 'age', 'sex', 'entry_type']
+        fields = ['acc_num', 'age', 'sex', 'site', 'spit', 'entry_type']

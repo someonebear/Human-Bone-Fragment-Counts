@@ -14,6 +14,21 @@ class Site(models.Model):
         return f'{self.name} - {self.city}, {self.country}'
 
 
+class Spit(models.Model):
+    number = models.PositiveSmallIntegerField()
+    site = models.ForeignKey(Site, related_name='spits',
+                             on_delete=models.RESTRICT)
+
+    def __str__(self):
+        return f'{self.site.name}, {self.site.city} - Spit {self.number}'
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=['number', 'site'], name='unique_site'),
+        ]
+
+
 class Element(models.Model):
     name = models.CharField(max_length=50)
     # For big bones like the cranium with multiple parts and duplicate landmarks
@@ -40,9 +55,6 @@ class Landmark(models.Model):
     def __str__(self):
         return f'{self.landmark_id} - {self.name}'
 
-# note: still have to add spit/accno/person IDs
-# spit may have to be another model
-
 
 class EntryGroup(models.Model):
     class Sex(models.TextChoices):
@@ -67,12 +79,15 @@ class EntryGroup(models.Model):
 
     acc_num = models.CharField(max_length=100, unique=True)
     sex = models.CharField(choices=Sex, max_length=50)
-    # site = models.ForeignKey(
-    #     Site, related_name='site_entries', on_delete=models.RESTRICT)
-    # spit = models.ForeignKey(
-    #     Spit, related_name='spit_entries', on_delete=models.RESTRICT)
+    site = models.ForeignKey(
+        Site, related_name='site_entries', on_delete=models.RESTRICT)
+    spit = models.ForeignKey(
+        Spit, related_name='spit_entries', on_delete=models.RESTRICT)
     age = models.CharField(choices=Age, max_length=50)
     entry_type = models.CharField(choices=Type, max_length=50)
+
+    def __str__(self):
+        return f'{self.acc_num}, {self.spit.site.name} - Spit {self.spit.number}'
 
 
 class Entry(models.Model):
@@ -87,7 +102,7 @@ class Entry(models.Model):
         CM_5_10 = "5-10cm", "5-10cm"
         CM_10 = ">10cm", ">10cm"
 
-    # TODO regex validator for this acc_num fieldR
+    # TODO regex validator for this acc_num field
     acc_num = models.ForeignKey(
         EntryGroup, to_field='acc_num', max_length=50, on_delete=models.RESTRICT)
     bone = models.ForeignKey(Element, on_delete=models.RESTRICT)
@@ -101,6 +116,10 @@ class Entry(models.Model):
     landmarks = models.ManyToManyField(Landmark)
     # logged_by = models.ForeignKey(User, on_delete=models.RESTRICT)    # TODO
     # TODO thumbnail
+
+    # TODO pending confirmation on accnum criteria.
+    # def __str__(self):
+    #     return f'{self.acc_num}'
 
     class Meta:
         verbose_name_plural = "entries"
