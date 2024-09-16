@@ -1001,22 +1001,22 @@
   {
     "model": "api.landmark",
     "pk": 124,
-    "fields": { "landmark_id": "RIB-1", "name": "Head", "bone": 19 }
+    "fields": { "landmark_id": "RIB-01", "name": "Head", "bone": 19 }
   },
   {
     "model": "api.landmark",
     "pk": 125,
-    "fields": { "landmark_id": "RIB-2", "name": "Tubercle", "bone": 19 }
+    "fields": { "landmark_id": "RIB-02", "name": "Tubercle", "bone": 19 }
   },
   {
     "model": "api.landmark",
     "pk": 126,
-    "fields": { "landmark_id": "RIB-3", "name": "Shaft", "bone": 19 }
+    "fields": { "landmark_id": "RIB-03", "name": "Shaft", "bone": 19 }
   },
   {
     "model": "api.landmark",
     "pk": 127,
-    "fields": { "landmark_id": "RIB-4", "name": "Sternal end", "bone": 19 }
+    "fields": { "landmark_id": "RIB-04", "name": "Sternal end", "bone": 19 }
   },
   {
     "model": "api.landmark",
@@ -1094,33 +1094,37 @@
   {
     "model": "api.landmark",
     "pk": 137,
-    "fields": { "landmark_id": "CLA-1", "name": "Acromial end", "bone": 21 }
+    "fields": { "landmark_id": "CLA-01", "name": "Acromial end", "bone": 21 }
   },
   {
     "model": "api.landmark",
     "pk": 138,
-    "fields": { "landmark_id": "CLA-2", "name": "Conoid tubercle", "bone": 21 }
+    "fields": { "landmark_id": "CLA-02", "name": "Conoid tubercle", "bone": 21 }
   },
   {
     "model": "api.landmark",
     "pk": 139,
-    "fields": { "landmark_id": "CLA-3", "name": "Deltoid tubercle", "bone": 21 }
+    "fields": {
+      "landmark_id": "CLA-03",
+      "name": "Deltoid tubercle",
+      "bone": 21
+    }
   },
   {
     "model": "api.landmark",
     "pk": 140,
-    "fields": { "landmark_id": "CLA-4", "name": "Shaft", "bone": 21 }
+    "fields": { "landmark_id": "CLA-04", "name": "Shaft", "bone": 21 }
   },
   {
     "model": "api.landmark",
     "pk": 141,
-    "fields": { "landmark_id": "CLA-5", "name": "Sternal end", "bone": 21 }
+    "fields": { "landmark_id": "CLA-05", "name": "Sternal end", "bone": 21 }
   },
   {
     "model": "api.landmark",
     "pk": 142,
     "fields": {
-      "landmark_id": "CLA-6",
+      "landmark_id": "CLA-06",
       "name": "Costoclavicular impression",
       "bone": 21
     }
@@ -1128,18 +1132,22 @@
   {
     "model": "api.landmark",
     "pk": 143,
-    "fields": { "landmark_id": "SCA-1", "name": "Acromion", "bone": 22 }
+    "fields": { "landmark_id": "SCA-01", "name": "Acromion", "bone": 22 }
   },
   {
     "model": "api.landmark",
     "pk": 144,
-    "fields": { "landmark_id": "SCA-2", "name": "Coracoid process", "bone": 22 }
+    "fields": {
+      "landmark_id": "SCA-02",
+      "name": "Coracoid process",
+      "bone": 22
+    }
   },
   {
     "model": "api.landmark",
     "pk": 145,
     "fields": {
-      "landmark_id": "SCA-3",
+      "landmark_id": "SCA-03",
       "name": "Spino-glenoid notch",
       "bone": 22
     }
@@ -1147,32 +1155,32 @@
   {
     "model": "api.landmark",
     "pk": 146,
-    "fields": { "landmark_id": "SCA-4", "name": "Glenoid fossa", "bone": 22 }
+    "fields": { "landmark_id": "SCA-04", "name": "Glenoid fossa", "bone": 22 }
   },
   {
     "model": "api.landmark",
     "pk": 147,
-    "fields": { "landmark_id": "SCA-5", "name": "Superior angle", "bone": 22 }
+    "fields": { "landmark_id": "SCA-05", "name": "Superior angle", "bone": 22 }
   },
   {
     "model": "api.landmark",
     "pk": 148,
-    "fields": { "landmark_id": "SCA-6", "name": "Scapular neck", "bone": 22 }
+    "fields": { "landmark_id": "SCA-06", "name": "Scapular neck", "bone": 22 }
   },
   {
     "model": "api.landmark",
     "pk": 149,
-    "fields": { "landmark_id": "SCA-7", "name": "Spine", "bone": 22 }
+    "fields": { "landmark_id": "SCA-07", "name": "Spine", "bone": 22 }
   },
   {
     "model": "api.landmark",
     "pk": 150,
-    "fields": { "landmark_id": "SCA-8", "name": "Medial angle", "bone": 22 }
+    "fields": { "landmark_id": "SCA-08", "name": "Medial angle", "bone": 22 }
   },
   {
     "model": "api.landmark",
     "pk": 151,
-    "fields": { "landmark_id": "SCA-9", "name": "Medial border", "bone": 22 }
+    "fields": { "landmark_id": "SCA-09", "name": "Medial border", "bone": 22 }
   },
   {
     "model": "api.landmark",
@@ -1187,28 +1195,32 @@
   {
     "model": "api.landmark",
     "pk": 154,
-    "fields": { "landmark_id": "HUM-1", "name": "Head", "bone": 23 }
+    "fields": { "landmark_id": "HUM-01", "name": "Head", "bone": 23 }
   },
   {
     "model": "api.landmark",
     "pk": 155,
-    "fields": { "landmark_id": "HUM-2", "name": "Surgical neck", "bone": 23 }
+    "fields": { "landmark_id": "HUM-02", "name": "Surgical neck", "bone": 23 }
   },
   {
     "model": "api.landmark",
     "pk": 156,
-    "fields": { "landmark_id": "HUM-3", "name": "Greater tubercle", "bone": 23 }
+    "fields": {
+      "landmark_id": "HUM-03",
+      "name": "Greater tubercle",
+      "bone": 23
+    }
   },
   {
     "model": "api.landmark",
     "pk": 157,
-    "fields": { "landmark_id": "HUM-4", "name": "Lesser tubercle", "bone": 23 }
+    "fields": { "landmark_id": "HUM-04", "name": "Lesser tubercle", "bone": 23 }
   },
   {
     "model": "api.landmark",
     "pk": 158,
     "fields": {
-      "landmark_id": "HUM-5",
+      "landmark_id": "HUM-05",
       "name": "Deltoid tuberosity",
       "bone": 23
     }
@@ -1216,18 +1228,18 @@
   {
     "model": "api.landmark",
     "pk": 159,
-    "fields": { "landmark_id": "HUM-6", "name": "Capitulum", "bone": 23 }
+    "fields": { "landmark_id": "HUM-06", "name": "Capitulum", "bone": 23 }
   },
   {
     "model": "api.landmark",
     "pk": 160,
-    "fields": { "landmark_id": "HUM-7", "name": "Trochlea", "bone": 23 }
+    "fields": { "landmark_id": "HUM-07", "name": "Trochlea", "bone": 23 }
   },
   {
     "model": "api.landmark",
     "pk": 161,
     "fields": {
-      "landmark_id": "HUM-8",
+      "landmark_id": "HUM-08",
       "name": "Lateral epicondyle",
       "bone": 23
     }
@@ -1236,7 +1248,7 @@
     "model": "api.landmark",
     "pk": 162,
     "fields": {
-      "landmark_id": "HUM-9",
+      "landmark_id": "HUM-09",
       "name": "Medial epicondyle",
       "bone": 23
     }
@@ -1276,18 +1288,18 @@
   {
     "model": "api.landmark",
     "pk": 167,
-    "fields": { "landmark_id": "RAD-1", "name": "Head", "bone": 24 }
+    "fields": { "landmark_id": "RAD-01", "name": "Head", "bone": 24 }
   },
   {
     "model": "api.landmark",
     "pk": 168,
-    "fields": { "landmark_id": "RAD-2", "name": "Neck", "bone": 24 }
+    "fields": { "landmark_id": "RAD-02", "name": "Neck", "bone": 24 }
   },
   {
     "model": "api.landmark",
     "pk": 169,
     "fields": {
-      "landmark_id": "RAD-3",
+      "landmark_id": "RAD-03",
       "name": "Radial tuberosity",
       "bone": 24
     }
@@ -1296,7 +1308,7 @@
     "model": "api.landmark",
     "pk": 170,
     "fields": {
-      "landmark_id": "RAD-4",
+      "landmark_id": "RAD-04",
       "name": "Distal half of shaft",
       "bone": 24
     }
@@ -1304,13 +1316,13 @@
   {
     "model": "api.landmark",
     "pk": 171,
-    "fields": { "landmark_id": "RAD-5", "name": "Styloid process", "bone": 24 }
+    "fields": { "landmark_id": "RAD-05", "name": "Styloid process", "bone": 24 }
   },
   {
     "model": "api.landmark",
     "pk": 172,
     "fields": {
-      "landmark_id": "RAD-6",
+      "landmark_id": "RAD-06",
       "name": "Distal articular surface",
       "bone": 24
     }
@@ -1318,13 +1330,13 @@
   {
     "model": "api.landmark",
     "pk": 173,
-    "fields": { "landmark_id": "RAD-7", "name": "Oblique line", "bone": 24 }
+    "fields": { "landmark_id": "RAD-07", "name": "Oblique line", "bone": 24 }
   },
   {
     "model": "api.landmark",
     "pk": 174,
     "fields": {
-      "landmark_id": "ULN-1",
+      "landmark_id": "ULN-01",
       "name": "Olecranon process",
       "bone": 25
     }
@@ -1332,32 +1344,36 @@
   {
     "model": "api.landmark",
     "pk": 175,
-    "fields": { "landmark_id": "ULN-2", "name": "Trochlear notch", "bone": 25 }
+    "fields": { "landmark_id": "ULN-02", "name": "Trochlear notch", "bone": 25 }
   },
   {
     "model": "api.landmark",
     "pk": 176,
-    "fields": { "landmark_id": "ULN-3", "name": "Coronoid process", "bone": 25 }
+    "fields": {
+      "landmark_id": "ULN-03",
+      "name": "Coronoid process",
+      "bone": 25
+    }
   },
   {
     "model": "api.landmark",
     "pk": 177,
-    "fields": { "landmark_id": "ULN-4", "name": "Radial notch", "bone": 25 }
+    "fields": { "landmark_id": "ULN-04", "name": "Radial notch", "bone": 25 }
   },
   {
     "model": "api.landmark",
     "pk": 178,
-    "fields": { "landmark_id": "ULN-5", "name": "Ulnar head", "bone": 25 }
+    "fields": { "landmark_id": "ULN-05", "name": "Ulnar head", "bone": 25 }
   },
   {
     "model": "api.landmark",
     "pk": 179,
-    "fields": { "landmark_id": "ULN-6", "name": "Styloid process", "bone": 25 }
+    "fields": { "landmark_id": "ULN-06", "name": "Styloid process", "bone": 25 }
   },
   {
     "model": "api.landmark",
     "pk": 180,
-    "fields": { "landmark_id": "ULN-7", "name": "Supinator crest", "bone": 25 }
+    "fields": { "landmark_id": "ULN-07", "name": "Supinator crest", "bone": 25 }
   },
   {
     "model": "api.landmark",
