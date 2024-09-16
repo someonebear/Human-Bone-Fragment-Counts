@@ -43,6 +43,10 @@ INSTALLED_APPS = [
     'djoser',
 ]
 
+DJOSER = {
+    'USER_CREATE_PASSWORD_RETYPE': True,
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
