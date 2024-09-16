@@ -26,5 +26,12 @@ class EntrySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Entry
-        fields = ['acc_num', 'bone', 'side', 'age', 'sex', 'size',
+        fields = ['acc_num', 'bone', 'side', 'size',
                   'generic', 'complete', 'notes', 'landmarks']
+
+
+class EntryGroupSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = EntryGroup
+        fields = ['acc_num', 'age', 'sex', 'entry_type']
