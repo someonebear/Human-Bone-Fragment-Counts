@@ -7,3 +7,4 @@ from .models import *
 admin.site.register(Element)
 admin.site.register(Landmark)
 admin.site.register(Entry)
+admin.site.register(EntryGroup)
