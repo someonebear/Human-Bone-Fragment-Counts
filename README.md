@@ -63,7 +63,7 @@ Using Httpie (installed above)
 Register and login using:
 
 ```bash
-http POST http://127.0.0.1:8000/auth/users/ username=new_username password=new_password
+http POST http://127.0.0.1:8000/auth/users/ username=new_username password=new_password re_password=new_password
 http POST http://127.0.0.1:8000/auth/tokens/login/ username=your_username password=your_password
 ```
 
