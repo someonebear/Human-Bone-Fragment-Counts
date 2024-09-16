@@ -24,7 +24,7 @@ Install dependencies with:
 pip install -r requirements.txt
 ```
 
-Deactivate virtual environment with:
+Deactivate virtual environment when finished working with:
 
 ```Bash
 deactivate
@@ -53,7 +53,8 @@ python manage.py runserver
 Populate elements and landmarks with:
 
 ```bash
-python manage.py loaddata api/fixtures/
+python manage.py loaddata api/fixtures/elements
+python manage.py loaddata api/fixtures/landmarks
 ```
 
 ## API Usage
@@ -75,4 +76,5 @@ Access element/landmark list using:
 ```bash
 http GET http://127.0.0.1:8000/elements/ "Authorization: Token yourtokenlongsequenceofcharacters"
 http GET http://127.0.0.1:8000/landmarks/ "Authorization: Token yourtokenlongsequenceofcharacters"
+http POST http://127.0.0.1:8000/entries/ "Authorization: Token yourtokenlongsequenceofcharacters" < api/test_entry.json
 ```

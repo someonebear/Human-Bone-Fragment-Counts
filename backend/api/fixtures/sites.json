@@ -1,0 +1,12 @@
+[
+  {
+    "model": "api.site",
+    "pk": 1,
+    "fields": {
+      "name": "site1",
+      "city": "Venice",
+      "country": "Italy",
+      "description": ""
+    }
+  }
+]

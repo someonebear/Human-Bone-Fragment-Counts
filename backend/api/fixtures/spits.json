@@ -1,0 +1,4 @@
+[
+  { "model": "api.spit", "pk": 1, "fields": { "number": 1, "site": 1 } },
+  { "model": "api.spit", "pk": 2, "fields": { "number": 2, "site": 1 } }
+]
