@@ -2,18 +2,13 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator
 # Create your models here.
-# class User(models.Model):
-#     first_name = models.CharField(max_length=60)
-#     last_name = models.CharField(max_length=60)
-#     email = models.EmailField(max_length=320)
-#     role = models.CharField(max_length=50)
 
 
 class Site(models.Model):
     name = models.CharField(max_length=100)
     city = models.CharField(max_length=90)
     country = models.CharField(max_length=30)
-    description = models.CharField(max_length=2000)
+    description = models.CharField(max_length=2000, blank=True)
 
     def __str__(self):
         return f'{self.name} - {self.city}, {self.country}'
@@ -32,7 +27,6 @@ class Element(models.Model):
     class Meta:
         models.UniqueConstraint(
             fields=['name', 'secondary'], name='unique_bone')
-    # bone_img = models.ImageField(upload_to='boneImages')
 
 
 class Landmark(models.Model):
@@ -50,11 +44,12 @@ class Landmark(models.Model):
 # spit may have to be another model
 
 
-class Entry(models.Model):
-    class Side(models.TextChoices):
-        LEFT = "Left"
-        RIGHT = "Right"
-        UNSIDED = "Unsided"
+class EntryGroup(models.Model):
+    class Sex(models.TextChoices):
+        FEMALE = "Female"
+        MALE = "Male"
+        AMBIGUOUS = "Ambiguous"
+        NOT_ASSESSED = "Not Assessed"
 
     class Age(models.TextChoices):
         INFANT = "Infant"
@@ -65,11 +60,26 @@ class Entry(models.Model):
         MAT_ADULT = "Mature Adult", "Mature Adult"
         NA = "Not Applicable", "Not Applicable"
 
-    class Sex(models.TextChoices):
-        FEMALE = "Female"
-        MALE = "Male"
-        AMBIGUOUS = "Ambiguous"
-        NOT_ASSESSED = "Not Assessed"
+    class Type(models.TextChoices):
+        IND = "Individual", "Individual"
+        BP = "Body Part", "Body Part"
+        FRAG = "Fragment", "Fragment"
+
+    acc_num = models.CharField(max_length=100, unique=True)
+    sex = models.CharField(choices=Sex, max_length=50)
+    # site = models.ForeignKey(
+    #     Site, related_name='site_entries', on_delete=models.RESTRICT)
+    # spit = models.ForeignKey(
+    #     Spit, related_name='spit_entries', on_delete=models.RESTRICT)
+    age = models.CharField(choices=Age, max_length=50)
+    entry_type = models.CharField(choices=Type, max_length=50)
+
+
+class Entry(models.Model):
+    class Side(models.TextChoices):
+        LEFT = "Left"
+        RIGHT = "Right"
+        UNSIDED = "Unsided"
 
     class Size(models.TextChoices):
         CM_2 = "<2cm", "<2cm"
@@ -77,31 +87,20 @@ class Entry(models.Model):
         CM_5_10 = "5-10cm", "5-10cm"
         CM_10 = ">10cm", ">10cm"
 
-    # site = models.ForeignKey(Site, on_delete=models.RESTRICT)
-    # logged_by = models.ForeignKey(User, on_delete=models.RESTRICT)
-    # TODO regex validator for this acc_num field
-    acc_num = models.CharField(max_length=50)
+    # TODO regex validator for this acc_num fieldR
+    acc_num = models.ForeignKey(
+        EntryGroup, to_field='acc_num', max_length=50, on_delete=models.RESTRICT)
     bone = models.ForeignKey(Element, on_delete=models.RESTRICT)
     # TODO Add default as unsided
     side = models.CharField(choices=Side, max_length=20)
-    age = models.CharField(choices=Age, max_length=50)
-    sex = models.CharField(choices=Sex, max_length=50)
     size = models.CharField(choices=Size, max_length=50)
     generic = models.BooleanField(default=False)
     complete = models.PositiveIntegerField(validators=[MaxValueValidator(100)])
     notes = models.TextField(max_length=2000, blank=True)
 
-    # landmarks = models.ManyToManyField(Landmark, through="IDLandmarks")
     landmarks = models.ManyToManyField(Landmark)
+    # logged_by = models.ForeignKey(User, on_delete=models.RESTRICT)    # TODO
+    # TODO thumbnail
 
     class Meta:
         verbose_name_plural = "entries"
-
-
-# class IDLandmarks(models.Model):
-#     entry = models.ForeignKey(Entry, on_delete=models.RESTRICT)
-#     landmark = models.ForeignKey(Landmark, on_delete=models.RESTRICT)
-#     found = models.BooleanField(default=False)
-
-#     class Meta:
-#         verbose_name_plural = "identified landmarks"
