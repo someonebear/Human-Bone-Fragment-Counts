@@ -39,14 +39,35 @@ class EntryDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = EntrySerializer
 
 
-class EntryGroupList(generics.ListCreateAPIView):
-    queryset = EntryGroup.objects.all()
-    serializer_class = EntryGroupSerializer
+class EntryMetaList(generics.ListCreateAPIView):
+    queryset = EntryMeta.objects.all()
+    serializer_class = EntryMetaSerializer
 
 
-class EntryGroupDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = EntryGroup.objects.all()
-    serializer_class = EntryGroupSerializer
+class EntryMetaDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = EntryMeta.objects.all()
+    serializer_class = EntryMetaSerializer
+
+
+class IndividualList(generics.ListCreateAPIView):
+    queryset = Individual.objects.all()
+    serializer_class = IndividualSerializer
+
+
+class IndividualDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Individual.objects.all()
+    serializer_class = IndividualSerializer
+
+
+class BodyPartList(generics.ListCreateAPIView):
+    queryset = BodyPart.objects.all()
+    serializer_class = BodyPartSerializer
+
+
+class BodyPartDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = BodyPart.objects.all()
+    serializer_class = BodyPartSerializer
+    lookup_field = 'bp_code__iexact'
 
 # @require_http_methods(["GET"])
 # class MNICalculation(APIView):

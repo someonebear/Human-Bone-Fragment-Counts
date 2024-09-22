@@ -27,11 +27,25 @@ class EntrySerializer(serializers.ModelSerializer):
     class Meta:
         model = Entry
         fields = ['acc_num', 'bone', 'side', 'size',
-                  'generic', 'complete', 'notes', 'landmarks']
+                  'generic', 'complete', 'notes', 'landmarks', 'meta', 'body_part']
 
 
-class EntryGroupSerializer(serializers.ModelSerializer):
+class IndividualSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = EntryGroup
-        fields = ['acc_num', 'age', 'sex', 'site', 'spit', 'entry_type']
+        model = Individual
+        fields = ['ind_code', 'meta']
+
+
+class BodyPartSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = BodyPart
+        fields = ['bp_code', 'ind', 'meta']
+
+
+class EntryMetaSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = EntryMeta
+        fields = ['age', 'sex', 'site', 'spit']
