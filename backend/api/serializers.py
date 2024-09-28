@@ -48,4 +48,4 @@ class EntryMetaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = EntryMeta
-        fields = ['age', 'sex', 'site', 'spit']
+        fields = ['pk', 'age', 'sex', 'site', 'spit']
