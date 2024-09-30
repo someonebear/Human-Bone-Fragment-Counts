@@ -1,6 +1,6 @@
 from rest_framework import generics
-from api.models import *
-from api.serializers import *
+from .models import *
+from .serializers import *
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.views.decorators.http import require_http_methods
@@ -30,6 +30,10 @@ class LandmarkDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 class EntryList(generics.ListCreateAPIView):
+    def get_serializer_class(self):
+        if self.request.method == 'GET':
+            return EntryDetailSerializer
+        return super().get_serializer_class()
     queryset = Entry.objects.all()
     serializer_class = EntrySerializer
 

@@ -30,6 +30,15 @@ class EntrySerializer(serializers.ModelSerializer):
                   'generic', 'complete', 'notes', 'landmarks', 'meta', 'body_part']
 
 
+class EntryDetailSerializer(serializers.ModelSerializer):
+    bone_name = serializers.CharField(read_only=True, source='bone.name')
+
+    class Meta:
+        model = Entry
+        fields = ['acc_num', 'side', 'size', 'bone_name',
+                  'generic', 'complete', 'notes', 'landmarks', 'meta', 'body_part']
+
+
 class IndividualSerializer(serializers.ModelSerializer):
 
     class Meta:
