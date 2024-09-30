@@ -81,10 +81,9 @@ class EntryMeta(models.Model):
         INFANT = "Infant"
         CHILD = "Child"
         ADOLESCENT = "Adolescent"
-        YOUNG_ADULT = "Young Adult"
         ADULT = "Adult"
         MAT_ADULT = "Mature Adult", "Mature Adult"
-        NA = "Not Applicable", "Not Applicable"
+        NA = "Not Assessed", "Not Assessed"
 
     class Type(models.TextChoices):
         IND = "Individual", "Individual"
@@ -99,7 +98,7 @@ class EntryMeta(models.Model):
     age = models.CharField(choices=Age, max_length=50)
 
     def __str__(self):
-        return f'{self.spit.site.name} - Spit {self.spit.number}'
+        return f'Meta {self.pk}, {self.spit.site.name} - Spit {self.spit.number}'
 
 
 class Entry(models.Model):
