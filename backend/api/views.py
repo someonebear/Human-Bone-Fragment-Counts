@@ -48,11 +48,19 @@ class EntryDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 class EntryMetaList(generics.ListCreateAPIView):
+    def get_serializer_class(self):
+        if self.request.method == 'GET':
+            return EntryMetaDetailSerializer
+        return super().get_serializer_class()
     queryset = EntryMeta.objects.all()
     serializer_class = EntryMetaSerializer
 
 
 class EntryMetaDetail(generics.RetrieveUpdateDestroyAPIView):
+    def get_serializer_class(self):
+        if self.request.method == 'GET':
+            return EntryMetaDetailSerializer
+        return super().get_serializer_class()
     queryset = EntryMeta.objects.all()
     serializer_class = EntryMetaSerializer
 

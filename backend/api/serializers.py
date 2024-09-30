@@ -78,3 +78,15 @@ class EntryDetailSerializer(serializers.ModelSerializer):
         model = Entry
         fields = ['acc_num', 'side', 'size', 'bone_name',
                   'generic', 'complete', 'notes', 'landmarks', 'meta', 'body_part']
+
+
+class EntryMetaDetailSerializer(serializers.ModelSerializer):
+    site = serializers.StringRelatedField()
+    individuals = serializers.StringRelatedField(many=True)
+    body_parts = serializers.StringRelatedField(many=True)
+    fragments = serializers.StringRelatedField(many=True)
+
+    class Meta:
+        model = EntryMeta
+        fields = ['pk', 'age', 'sex', 'site',
+                  'spit', 'individuals', 'body_parts', 'fragments']

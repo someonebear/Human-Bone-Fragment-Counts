@@ -59,7 +59,7 @@ class Landmark(models.Model):
 class Individual(models.Model):
     ind_code = models.CharField(max_length=100, unique=True)
     meta = models.ForeignKey(
-        'EntryMeta', related_name='individual', on_delete=models.RESTRICT)
+        'EntryMeta', related_name='individuals', on_delete=models.RESTRICT)
 
     def __str__(self):
         return f'{self.ind_code}'
