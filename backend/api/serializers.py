@@ -30,8 +30,17 @@ class EntrySerializer(serializers.ModelSerializer):
                   'generic', 'complete', 'notes', 'landmarks', 'meta', 'body_part']
 
 
+class EntryMetaSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = EntryMeta
+        fields = ['pk', 'age', 'sex', 'site', 'spit']
+
+
 class EntryDetailSerializer(serializers.ModelSerializer):
     bone_name = serializers.CharField(read_only=True, source='bone.name')
+    landmarks = serializers.StringRelatedField(many=True)
+    meta = EntryMetaSerializer(read_only=True)
 
     class Meta:
         model = Entry
@@ -51,10 +60,3 @@ class BodyPartSerializer(serializers.ModelSerializer):
     class Meta:
         model = BodyPart
         fields = ['bp_code', 'ind', 'meta']
-
-
-class EntryMetaSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = EntryMeta
-        fields = ['pk', 'age', 'sex', 'site', 'spit']

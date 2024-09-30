@@ -39,6 +39,10 @@ class EntryList(generics.ListCreateAPIView):
 
 
 class EntryDetail(generics.RetrieveUpdateDestroyAPIView):
+    def get_serializer_class(self):
+        if self.request.method == 'GET':
+            return EntryDetailSerializer
+        return super().get_serializer_class()
     queryset = Entry.objects.all()
     serializer_class = EntrySerializer
 
