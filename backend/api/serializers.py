@@ -36,6 +36,15 @@ class IndividualSerializer(serializers.ModelSerializer):
         fields = ['ind_code', 'meta']
 
 
+class IndividualDetailSerializer(serializers.ModelSerializer):
+    meta = EntryMetaSerializer(read_only=True)
+    body_parts = serializers.StringRelatedField(many=True)
+
+    class Meta:
+        model = Individual
+        fields = ['ind_code', 'meta', 'body_parts']
+
+
 class BodyPartSerializer(serializers.ModelSerializer):
 
     class Meta:

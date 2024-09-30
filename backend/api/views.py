@@ -58,13 +58,22 @@ class EntryMetaDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 class IndividualList(generics.ListCreateAPIView):
+    def get_serializer_class(self):
+        if self.request.method == 'GET':
+            return IndividualDetailSerializer
+        return super().get_serializer_class()
     queryset = Individual.objects.all()
     serializer_class = IndividualSerializer
 
 
 class IndividualDetail(generics.RetrieveUpdateDestroyAPIView):
+    def get_serializer_class(self):
+        if self.request.method == 'GET':
+            return IndividualDetailSerializer
+        return super().get_serializer_class()
     queryset = Individual.objects.all()
     serializer_class = IndividualSerializer
+    lookup_field = 'ind_code__iexact'
 
 
 class BodyPartList(generics.ListCreateAPIView):
