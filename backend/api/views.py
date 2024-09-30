@@ -26,7 +26,7 @@ class LandmarkList(generics.ListCreateAPIView):
 class LandmarkDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Landmark.objects.all()
     serializer_class = LandmarkSerializer
-    lookup_field = 'id__iexact'
+    lookup_field = 'landmark_id__iexact'
 
 
 class EntryList(generics.ListCreateAPIView):
