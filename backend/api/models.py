@@ -61,6 +61,9 @@ class Individual(models.Model):
     meta = models.ForeignKey(
         'EntryMeta', related_name='individual', on_delete=models.RESTRICT)
 
+    def __str__(self):
+        return f'{self.ind_code}'
+
 
 class BodyPart(models.Model):
     bp_code = models.CharField(max_length=100, unique=True)
@@ -68,6 +71,9 @@ class BodyPart(models.Model):
         Individual, related_name='body_parts', to_field='ind_code', on_delete=models.RESTRICT, blank=True, null=True)
     meta = models.ForeignKey(
         'EntryMeta', related_name='body_parts', on_delete=models.RESTRICT)
+
+    def __str__(self):
+        return f'{self.bp_code}'
 
 
 class EntryMeta(models.Model):
