@@ -68,11 +68,19 @@ class IndividualDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 class BodyPartList(generics.ListCreateAPIView):
+    def get_serializer_class(self):
+        if self.request.method == 'GET':
+            return BodyPartDetailSerializer
+        return super().get_serializer_class()
     queryset = BodyPart.objects.all()
     serializer_class = BodyPartSerializer
 
 
 class BodyPartDetail(generics.RetrieveUpdateDestroyAPIView):
+    def get_serializer_class(self):
+        if self.request.method == 'GET':
+            return BodyPartDetailSerializer
+        return super().get_serializer_class()
     queryset = BodyPart.objects.all()
     serializer_class = BodyPartSerializer
     lookup_field = 'bp_code__iexact'
