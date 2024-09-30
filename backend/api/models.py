@@ -59,7 +59,10 @@ class Landmark(models.Model):
 class Individual(models.Model):
     ind_code = models.CharField(max_length=100, unique=True)
     meta = models.ForeignKey(
-        'EntryMeta', related_name='individual', on_delete=models.RESTRICT)
+        'EntryMeta', related_name='individuals', on_delete=models.RESTRICT)
+
+    def __str__(self):
+        return f'{self.ind_code}'
 
 
 class BodyPart(models.Model):
@@ -68,6 +71,9 @@ class BodyPart(models.Model):
         Individual, related_name='body_parts', to_field='ind_code', on_delete=models.RESTRICT, blank=True, null=True)
     meta = models.ForeignKey(
         'EntryMeta', related_name='body_parts', on_delete=models.RESTRICT)
+
+    def __str__(self):
+        return f'{self.bp_code}'
 
 
 class EntryMeta(models.Model):
@@ -81,10 +87,9 @@ class EntryMeta(models.Model):
         INFANT = "Infant"
         CHILD = "Child"
         ADOLESCENT = "Adolescent"
-        YOUNG_ADULT = "Young Adult"
         ADULT = "Adult"
         MAT_ADULT = "Mature Adult", "Mature Adult"
-        NA = "Not Applicable", "Not Applicable"
+        NA = "Not Assessed", "Not Assessed"
 
     class Type(models.TextChoices):
         IND = "Individual", "Individual"
@@ -99,7 +104,7 @@ class EntryMeta(models.Model):
     age = models.CharField(choices=Age, max_length=50)
 
     def __str__(self):
-        return f'{self.spit.site.name} - Spit {self.spit.number}'
+        return f'Meta {self.pk}, {self.spit.site.name} - Spit {self.spit.number}'
 
 
 class Entry(models.Model):
