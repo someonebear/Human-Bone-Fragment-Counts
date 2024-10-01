@@ -1,0 +1,45 @@
+{
+  "site": "site_name",
+  "spit_1": {
+    "cranium": {
+      "infant": { "landmark": "CRA-54", "mne": 3 },
+      "child": { "landmark": "CRA-42", "mne": 4 },
+      "adolescent": {},
+      "adult": { "landmark": "LM-46", "mne": 15 },
+      "mature_adult": {},
+      "not_assessed": {},
+      "total": 22
+    },
+    "mandible": {
+      "infant": { "landmark": "MND-54", "mne": 3 },
+      "child": { "landmark": "MND-61", "mne": 1 },
+      "adolescent": {},
+      "adult": { "landmark": "MND-55", "mne": 15 },
+      "mature_adult": {},
+      "not_assessed": {},
+      "total": 19
+    },
+    "mni": 22
+  },
+  "spit_2": {
+    "cranium": {
+      "infant": {},
+      "child": {},
+      "adolescent": {},
+      "adult": {},
+      "mature_adult": {},
+      "not_assessed": {},
+      "total": 0
+    },
+    "mandible": {
+      "infant": {},
+      "child": {},
+      "adolescent": {},
+      "adult": {},
+      "mature_adult": {},
+      "not_assessed": {},
+      "total": 0
+    },
+    "mni": 0
+  }
+}

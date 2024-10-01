@@ -1,0 +1,105 @@
+{
+  "site": "site_name",
+  "spit_1": {
+    "cranium": {
+      "male": {
+        "infant": { "landmark": "CRA-54", "mne": 3 },
+        "child": { "landmark": "CRA-42", "mne": 4 },
+        "adolescent": {},
+        "adult": { "landmark": "LM-46", "mne": 15 },
+        "mature_adult": {},
+        "not_assessed": {},
+        "total": 22
+      },
+      "female": {
+        "infant": { "landmark": "CRA-54", "mne": 3 },
+        "child": { "landmark": "CRA-42", "mne": 4 },
+        "adolescent": {},
+        "adult": { "landmark": "LM-46", "mne": 15 },
+        "mature_adult": {},
+        "not_assessed": {},
+        "total": 22
+      },
+      "ambiguous": {
+        "infant": { "landmark": "CRA-54", "mne": 3 },
+        "child": { "landmark": "CRA-42", "mne": 4 },
+        "adolescent": {},
+        "adult": { "landmark": "LM-46", "mne": 15 },
+        "mature_adult": {},
+        "not_assessed": {},
+        "total": 22
+      },
+      "not_assessed": {
+        "infant": { "landmark": "CRA-54", "mne": 3 },
+        "child": { "landmark": "CRA-42", "mne": 4 },
+        "adolescent": {},
+        "adult": { "landmark": "LM-46", "mne": 15 },
+        "mature_adult": {},
+        "not_assessed": {},
+        "total": 22
+      },
+      "total": 123
+    },
+    "mandible": {
+      "male": {
+        "infant": { "landmark": "CRA-54", "mne": 3 },
+        "child": { "landmark": "CRA-42", "mne": 4 },
+        "adolescent": {},
+        "adult": { "landmark": "LM-46", "mne": 15 },
+        "mature_adult": {},
+        "not_assessed": {},
+        "total": 22
+      },
+      "female": {
+        "infant": { "landmark": "CRA-54", "mne": 3 },
+        "child": { "landmark": "CRA-42", "mne": 4 },
+        "adolescent": {},
+        "adult": { "landmark": "LM-46", "mne": 15 },
+        "mature_adult": {},
+        "not_assessed": {},
+        "total": 22
+      },
+      "ambiguous": {
+        "infant": { "landmark": "CRA-54", "mne": 3 },
+        "child": { "landmark": "CRA-42", "mne": 4 },
+        "adolescent": {},
+        "adult": { "landmark": "LM-46", "mne": 15 },
+        "mature_adult": {},
+        "not_assessed": {},
+        "total": 22
+      },
+      "not_assessed": {
+        "infant": { "landmark": "CRA-54", "mne": 3 },
+        "child": { "landmark": "CRA-42", "mne": 4 },
+        "adolescent": {},
+        "adult": { "landmark": "LM-46", "mne": 15 },
+        "mature_adult": {},
+        "not_assessed": {},
+        "total": 22
+      },
+      "total": 123
+    },
+    "mni": 22
+  },
+  "spit_2": {
+    "cranium": {
+      "infant": {},
+      "child": {},
+      "adolescent": {},
+      "adult": {},
+      "mature_adult": {},
+      "not_assessed": {},
+      "total": 0
+    },
+    "mandible": {
+      "infant": {},
+      "child": {},
+      "adolescent": {},
+      "adult": {},
+      "mature_adult": {},
+      "not_assessed": {},
+      "total": 0
+    },
+    "mni": 0
+  }
+}
