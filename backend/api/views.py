@@ -108,6 +108,6 @@ class MNICalculation(APIView):
         site = Site.objects.get(pk=1)
         spit = Spit.objects.get(site=site, number=2)
         element = Element.objects.get(name="Frontal")
-        dict1 = get_mne(spit, element, "Infant")
 
+        dict1 = get_mne_by_age(spit, element)
         return Response(dict1)
