@@ -4,6 +4,7 @@ from .serializers import *
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .utils import *
+from django.shortcuts import get_object_or_404
 # Create your views here.
 
 
@@ -104,9 +105,7 @@ class BodyPartDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 class MNICalculation(APIView):
-    def get(self, request, format=None):
-        site = Site.objects.get(pk=1)
-        spit = Spit.objects.get(site=site, number=2)
-
-        dict1 = get_mne_by_element(spit)
-        return Response(dict1)
+    def get(self, request, site_pk, format=None):
+        site = get_object_or_404(Site, pk=site_pk)
+        calc = get_mne_by_spit(site)
+        return Response(calc)

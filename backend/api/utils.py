@@ -49,7 +49,7 @@ def get_mne_by_age(spit, element, secondary=None):
 def get_mne_by_element(spit):
     """For given spit, find the mne for each element in database
 
-    Calls get_mne_by_age for each element
+    Calls get_mne_by_age() for each element
     Elements with multiple parts such as the cranium and foot are treated as one element
     """
     elements = Element.objects.all()
@@ -57,14 +57,32 @@ def get_mne_by_element(spit):
     mni = 0
     for element in elements:
         if element.secondary == "":
-            out_dict[element.name] = get_mne_by_age(spit, element)
-            if out_dict[element.name]["total"] > mni:
-                mni = out_dict[element.name]["total"]
+            data = get_mne_by_age(spit, element)
+            element = element.name.lower().replace(' ', '_')
+            out_dict[element] = data
+            if out_dict[element]["total"] > mni:
+                mni = out_dict[element]["total"]
         else:
             if not element.secondary in out_dict:
-                out_dict[element.secondary] = get_mne_by_age(
+                data = get_mne_by_age(
                     spit, element, element.secondary)
-                if out_dict[element.secondary]["total"] > mni:
-                    mni = out_dict[element.secondary]["total"]
+                element = element.secondary.lower().replace(' ', '_')
+                out_dict[element] = data
+                if out_dict[element]["total"] > mni:
+                    mni = out_dict[element]["total"]
     out_dict["mni"] = mni
+    return out_dict
+
+
+def get_mne_by_spit(site):
+    """For a given site, return mne calculations for each spit
+
+    Calls get_mne_by_element()
+    """
+    spits = Spit.objects.filter(site=site)
+    if not spits:
+        return {}
+    out_dict = {"site_name": site.name}
+    for spit in spits:
+        out_dict[f'context_{spit.number}'] = get_mne_by_element(spit)
     return out_dict
