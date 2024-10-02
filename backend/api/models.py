@@ -89,7 +89,7 @@ class EntryMeta(models.Model):
         ADOLESCENT = "Adolescent"
         ADULT = "Adult"
         MAT_ADULT = "Mature Adult", "Mature Adult"
-        NA = "Not Assessed", "Not Assessed"
+        NOT_ASSESSED = "Not Assessed", "Not Assessed"
 
     class Type(models.TextChoices):
         IND = "Individual", "Individual"
