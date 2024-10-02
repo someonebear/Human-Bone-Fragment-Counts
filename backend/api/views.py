@@ -3,7 +3,7 @@ from .models import *
 from .serializers import *
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from django.views.decorators.http import require_http_methods
+from .utils import *
 # Create your views here.
 
 
@@ -102,12 +102,12 @@ class BodyPartDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = BodyPartSerializer
     lookup_field = 'bp_code__iexact'
 
-# @require_http_methods(["GET"])
-# class MNICalculation(APIView):
-#     def get(self, request, format=None):
-#         dict1 = {}
-#         dict1["number1"] = 1
-#         dict1["number2"] = 2
-#         dict1["answer"] = dict1["number1"] + dict1["number2"]
 
-#         return Response(dict1)
+class MNICalculation(APIView):
+    def get(self, request, format=None):
+        site = Site.objects.get(pk=1)
+        spit = Spit.objects.get(site=site, number=2)
+        element = Element.objects.get(name="Frontal")
+        dict1 = get_mne(spit, element, "Infant")
+
+        return Response(dict1)
