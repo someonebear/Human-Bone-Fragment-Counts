@@ -26,7 +26,7 @@ class EntryMetaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = EntryMeta
-        fields = ['pk', 'age', 'sex', 'site', 'spit']
+        fields = ['pk', 'age', 'sex', 'site', 'spit', 'acc_num']
 
 
 class IndividualSerializer(serializers.ModelSerializer):
@@ -65,7 +65,7 @@ class EntrySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Entry
-        fields = ['acc_num', 'bone', 'side', 'size',
+        fields = ['bone', 'side', 'size',
                   'generic', 'complete', 'notes', 'landmarks', 'meta', 'body_part']
 
 
@@ -76,7 +76,7 @@ class EntryDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Entry
-        fields = ['acc_num', 'side', 'size', 'bone_name',
+        fields = ['side', 'size', 'bone_name',
                   'generic', 'complete', 'notes', 'landmarks', 'meta', 'body_part']
 
 
@@ -88,5 +88,5 @@ class EntryMetaDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = EntryMeta
-        fields = ['pk', 'age', 'sex', 'site',
+        fields = ['pk', 'age', 'sex', 'site', 'acc_num',
                   'spit', 'individuals', 'body_parts', 'fragments']

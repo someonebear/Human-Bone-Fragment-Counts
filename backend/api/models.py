@@ -96,6 +96,7 @@ class EntryMeta(models.Model):
         BP = "Body Part", "Body Part"
         FRAG = "Fragment", "Fragment"
 
+    acc_num = models.CharField(max_length=100, unique=True)
     sex = models.CharField(choices=Sex, max_length=50)
     site = models.ForeignKey(
         Site, related_name='site_entries', on_delete=models.RESTRICT)
@@ -124,7 +125,6 @@ class Entry(models.Model):
     meta = models.ForeignKey(
         EntryMeta, related_name='fragments', on_delete=models.RESTRICT)
     # TODO regex validator for this acc_num field
-    acc_num = models.CharField(max_length=100, unique=True)
     bone = models.ForeignKey(Element, on_delete=models.RESTRICT)
     # TODO Add default as unsided
     side = models.CharField(choices=Side, max_length=20)
@@ -138,7 +138,7 @@ class Entry(models.Model):
     # TODO thumbnail
 
     def __str__(self):
-        return f'{self.acc_num}'
+        return f'{self.pk}'
 
     class Meta:
         verbose_name_plural = "entries"
