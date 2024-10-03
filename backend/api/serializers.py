@@ -10,7 +10,7 @@ class ElementSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Element
-        fields = ['element_name', 'secondary', 'landmarks']
+        fields = ['element_name', 'secondary', 'landmarks', 'pk']
 
 
 class LandmarkSerializer(serializers.ModelSerializer):

@@ -3,7 +3,9 @@ from .models import *
 from .serializers import *
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from django.views.decorators.http import require_http_methods
+from .utils import *
+from django.shortcuts import get_object_or_404
+import pdb
 # Create your views here.
 
 
@@ -102,12 +104,10 @@ class BodyPartDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = BodyPartSerializer
     lookup_field = 'bp_code__iexact'
 
-# @require_http_methods(["GET"])
-# class MNICalculation(APIView):
-#     def get(self, request, format=None):
-#         dict1 = {}
-#         dict1["number1"] = 1
-#         dict1["number2"] = 2
-#         dict1["answer"] = dict1["number1"] + dict1["number2"]
 
-#         return Response(dict1)
+class MNICalculation(APIView):
+    def get(self, request, site_pk, format=None):
+        site = get_object_or_404(Site, pk=site_pk)
+        sex_split = bool(request.path.find("sex") != -1)
+        calc = get_mne_by_spit(site, sex_split)
+        return Response(calc)
