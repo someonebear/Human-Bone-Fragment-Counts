@@ -129,7 +129,7 @@ class Entry(models.Model):
     # TODO Add default as unsided
     side = models.CharField(choices=Side, max_length=20)
     size = models.CharField(choices=Size, max_length=50)
-    generic = models.BooleanField(default=False)
+    generic = models.PositiveIntegerField()
     complete = models.PositiveIntegerField(validators=[MaxValueValidator(100)])
     notes = models.TextField(max_length=2000, blank=True)
 
