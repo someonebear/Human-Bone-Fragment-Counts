@@ -5,6 +5,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from .utils import *
 from django.shortcuts import get_object_or_404
+import pdb
 # Create your views here.
 
 
@@ -107,5 +108,6 @@ class BodyPartDetail(generics.RetrieveUpdateDestroyAPIView):
 class MNICalculation(APIView):
     def get(self, request, site_pk, format=None):
         site = get_object_or_404(Site, pk=site_pk)
-        calc = get_mne_by_spit(site)
+        sex_split = bool(request.path.find("sex") != -1)
+        calc = get_mne_by_spit(site, sex_split)
         return Response(calc)

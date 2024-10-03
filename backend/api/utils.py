@@ -1,15 +1,22 @@
 from .models import *
-
 # TODO add sex as a category in this function
 
 
-def get_mne(spit, element, age, secondary=None):
+def get_mne(spit, element, age, sex, secondary):
     if not secondary:
-        entries = Entry.objects.filter(meta__spit=spit).filter(
-            bone=element).filter(meta__age=age)
+        if sex is None:
+            entries = Entry.objects.filter(meta__spit=spit).filter(
+                bone=element).filter(meta__age=age)
+        else:
+            entries = Entry.objects.filter(meta__spit=spit).filter(
+                bone=element).filter(meta__age=age).filter(meta__sex=sex)
     else:
-        entries = Entry.objects.filter(meta__spit=spit).filter(
-            bone__secondary=secondary).filter(meta__age=age)
+        if sex is None:
+            entries = Entry.objects.filter(meta__spit=spit).filter(
+                bone__secondary=secondary).filter(meta__age=age)
+        else:
+            entries = Entry.objects.filter(meta__spit=spit).filter(
+                bone__secondary=secondary).filter(meta__age=age).filter(meta__sex=sex)
     if not entries:
         return {}
     landmark_count = {}
@@ -28,7 +35,7 @@ def get_mne(spit, element, age, secondary=None):
         return {"landmark": lm[0], "mne": mne}
 
 
-def get_mne_by_age(spit, element, secondary=None):
+def get_mne_by_age(spit, element, secondary, sex=None):
     """ For given spit and element, find the mne for each age group in database
 
     Calls get_mne() for each age group.
@@ -37,7 +44,7 @@ def get_mne_by_age(spit, element, secondary=None):
     out_dict = {}
     total = 0
     for age in age_cats:
-        mne = get_mne(spit, element, age, secondary)
+        mne = get_mne(spit, element, age, sex, secondary)
         age = age.lower().replace(' ', '_')
         out_dict[age] = mne
         if out_dict[age]:
@@ -46,7 +53,25 @@ def get_mne_by_age(spit, element, secondary=None):
     return out_dict
 
 
-def get_mne_by_element(spit):
+def get_mne_by_sex(spit, element, sex_split, secondary=None):
+    """If called for, further split calculations by sex
+    """
+    if not sex_split:
+        return get_mne_by_age(spit, element, secondary)
+    sex_cats = [x for (x, y) in EntryMeta.Sex.choices]
+    out_dict = {}
+    total = 0
+    for sex in sex_cats:
+        mne = get_mne_by_age(spit, element, secondary, sex)
+        sex = sex.lower().replace(' ', '_')
+        out_dict[sex] = mne
+        if out_dict[sex]:
+            total += out_dict[sex]["total"]
+    out_dict["total"] = total
+    return out_dict
+
+
+def get_mne_by_element(spit, sex_split):
     """For given spit, find the mne for each element in database
 
     Calls get_mne_by_age() for each element
@@ -57,15 +82,15 @@ def get_mne_by_element(spit):
     mni = 0
     for element in elements:
         if element.secondary == "":
-            data = get_mne_by_age(spit, element)
+            data = get_mne_by_sex(spit, element, sex_split)
             element = element.name.lower().replace(' ', '_')
             out_dict[element] = data
             if out_dict[element]["total"] > mni:
                 mni = out_dict[element]["total"]
         else:
             if not element.secondary in out_dict:
-                data = get_mne_by_age(
-                    spit, element, element.secondary)
+                data = get_mne_by_sex(
+                    spit, element, sex_split, element.secondary)
                 element = element.secondary.lower().replace(' ', '_')
                 out_dict[element] = data
                 if out_dict[element]["total"] > mni:
@@ -74,7 +99,7 @@ def get_mne_by_element(spit):
     return out_dict
 
 
-def get_mne_by_spit(site):
+def get_mne_by_spit(site, sex_split=False):
     """For a given site, return mne calculations for each spit
 
     Calls get_mne_by_element()
@@ -83,6 +108,10 @@ def get_mne_by_spit(site):
     if not spits:
         return {}
     out_dict = {"site_name": site.name}
+    site_total = 0
     for spit in spits:
-        out_dict[f'context_{spit.number}'] = get_mne_by_element(spit)
+        out_dict[f'context_{spit.number}'] = get_mne_by_element(
+            spit, sex_split)
+        site_total += out_dict[f'context_{spit.number}']["mni"]
+    out_dict["site_mni"] = site_total
     return out_dict
