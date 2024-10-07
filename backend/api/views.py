@@ -1,4 +1,4 @@
-from rest_framework import generics
+from rest_framework import generics, status
 from .models import *
 from .serializers import *
 from rest_framework.views import APIView
@@ -36,6 +36,22 @@ class EntryList(generics.ListCreateAPIView):
         if self.request.method == 'GET':
             return EntryDetailSerializer
         return super().get_serializer_class()
+
+    def create(self, request, *args, **kwargs):
+        relative_landmarks = request.data['landmarks']
+        landmarks_in_element = Landmark.objects.filter(
+            bone=request.data['bone'])
+        absolute_landmarks = []
+        for landmark in relative_landmarks:
+            landmark_obj = landmarks_in_element[landmark-1]
+            absolute_landmarks.append(landmark_obj.pk)
+        request.data['landmarks'] = absolute_landmarks
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        self.perform_create(serializer)
+        headers = self.get_success_headers(serializer.data)
+        return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+
     queryset = Entry.objects.all()
     serializer_class = EntrySerializer
 
