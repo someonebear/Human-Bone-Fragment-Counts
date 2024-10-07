@@ -96,12 +96,16 @@ class EntryMeta(models.Model):
         BP = "Body Part", "Body Part"
         FRAG = "Fragment", "Fragment"
 
-    sex = models.CharField(choices=Sex, max_length=50)
+    # TODO add default values
+    sex = models.CharField(choices=Sex, max_length=50,
+                           default=Sex.NOT_ASSESSED)
     site = models.ForeignKey(
         Site, related_name='site_entries', on_delete=models.RESTRICT)
     spit = models.ForeignKey(
         Spit, related_name='spit_entries', on_delete=models.RESTRICT)
-    age = models.CharField(choices=Age, max_length=50)
+    age = models.CharField(choices=Age, max_length=50,
+                           default=Age.NOT_ASSESSED)
+    notes = models.TextField(max_length=2000, blank=True)
 
     def __str__(self):
         return f'Meta {self.pk}, {self.spit.site.name} - Spit {self.spit.number}'
@@ -121,17 +125,19 @@ class Entry(models.Model):
 
     body_part = models.ForeignKey(
         BodyPart, related_name='fragments', to_field='bp_code', on_delete=models.RESTRICT, blank=True, null=True)
+    ind = models.ForeignKey(Individual, related_name='fragments',
+                            to_field='ind_code', on_delete=models.RESTRICT, blank=True, null=True)
     meta = models.ForeignKey(
         EntryMeta, related_name='fragments', on_delete=models.RESTRICT)
     # TODO regex validator for this acc_num field
-    acc_num = models.CharField(max_length=100, unique=True)
+    acc_num = models.CharField(
+        max_length=100, unique=True, blank=True, null=True)
     bone = models.ForeignKey(Element, on_delete=models.RESTRICT)
     # TODO Add default as unsided
-    side = models.CharField(choices=Side, max_length=20)
+    side = models.CharField(choices=Side, max_length=20, default=Side.UNSIDED)
     size = models.CharField(choices=Size, max_length=50)
-    generic = models.BooleanField(default=False)
+    generic = models.PositiveIntegerField(default=0)
     complete = models.PositiveIntegerField(validators=[MaxValueValidator(100)])
-    notes = models.TextField(max_length=2000, blank=True)
 
     landmarks = models.ManyToManyField(Landmark)
     # logged_by = models.ForeignKey(User, on_delete=models.RESTRICT)    # TODO
