@@ -26,11 +26,10 @@ class EntryMetaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = EntryMeta
-        fields = ['pk', 'age', 'sex', 'site', 'spit']
+        fields = ['pk', 'age', 'sex', 'site', 'spit', 'notes']
 
 
 class IndividualSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Individual
         fields = ['ind_code', 'meta']
@@ -39,10 +38,11 @@ class IndividualSerializer(serializers.ModelSerializer):
 class IndividualDetailSerializer(serializers.ModelSerializer):
     meta = EntryMetaSerializer(read_only=True)
     body_parts = serializers.StringRelatedField(many=True)
+    fragments = serializers.StringRelatedField(many=True)
 
     class Meta:
         model = Individual
-        fields = ['ind_code', 'meta', 'body_parts']
+        fields = ['ind_code', 'meta', 'body_parts', 'fragments']
 
 
 class BodyPartSerializer(serializers.ModelSerializer):
@@ -66,7 +66,7 @@ class EntrySerializer(serializers.ModelSerializer):
     class Meta:
         model = Entry
         fields = ['acc_num', 'bone', 'side', 'size',
-                  'generic', 'complete', 'notes', 'landmarks', 'meta', 'body_part']
+                  'generic', 'complete', 'landmarks', 'meta', 'body_part', 'ind']
 
 
 class EntryDetailSerializer(serializers.ModelSerializer):
@@ -77,7 +77,7 @@ class EntryDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Entry
         fields = ['acc_num', 'side', 'size', 'bone_name',
-                  'generic', 'complete', 'notes', 'landmarks', 'meta', 'body_part']
+                  'generic', 'complete', 'landmarks', 'meta', 'body_part', 'ind']
 
 
 class EntryMetaDetailSerializer(serializers.ModelSerializer):
@@ -89,4 +89,4 @@ class EntryMetaDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = EntryMeta
         fields = ['pk', 'age', 'sex', 'site',
-                  'spit', 'individuals', 'body_parts', 'fragments']
+                  'spit', 'individuals', 'body_parts', 'fragments', 'notes']
