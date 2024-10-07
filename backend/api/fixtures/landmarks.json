@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
       "landmark_id": "CRA-01",
-      "name": "Left superciliary notch/foramen",
+      "name": "Left superciliary arch",
       "bone": 1
     }
   },
@@ -13,7 +13,7 @@
     "pk": 2,
     "fields": {
       "landmark_id": "CRA-02",
-      "name": "Right superciliary notch/foramen",
+      "name": "Right superciliary arch",
       "bone": 1
     }
   },
@@ -22,7 +22,7 @@
     "pk": 3,
     "fields": {
       "landmark_id": "CRA-03",
-      "name": "Left zygomatic process",
+      "name": "Left supraorbital margin",
       "bone": 1
     }
   },
@@ -31,7 +31,7 @@
     "pk": 4,
     "fields": {
       "landmark_id": "CRA-04",
-      "name": "Right zygomatic process",
+      "name": "Right supraorbital margin",
       "bone": 1
     }
   },
@@ -43,32 +43,24 @@
   {
     "model": "api.landmark",
     "pk": 6,
-    "fields": { "landmark_id": "CRA-06", "name": "Glabella region", "bone": 1 }
+    "fields": { "landmark_id": "CRA-06", "name": "Left nasal bone", "bone": 1 }
   },
   {
     "model": "api.landmark",
     "pk": 7,
-    "fields": {
-      "landmark_id": "CRA-07",
-      "name": "Left temporal line",
-      "bone": 1
-    }
+    "fields": { "landmark_id": "CRA-07", "name": "Right nasal bone", "bone": 1 }
   },
   {
     "model": "api.landmark",
     "pk": 8,
-    "fields": {
-      "landmark_id": "CRA-08",
-      "name": "Right temporal line",
-      "bone": 1
-    }
+    "fields": { "landmark_id": "CRA-08", "name": "Vomer", "bone": 1 }
   },
   {
     "model": "api.landmark",
     "pk": 9,
     "fields": {
       "landmark_id": "CRA-09",
-      "name": "Left sphenoid angle",
+      "name": "Left infraorbital foramen",
       "bone": 1
     }
   },
@@ -77,37 +69,45 @@
     "pk": 10,
     "fields": {
       "landmark_id": "CRA-10",
-      "name": "Right sphenoid angle",
+      "name": "Right infraorbital foramen",
       "bone": 1
     }
   },
   {
     "model": "api.landmark",
     "pk": 11,
-    "fields": { "landmark_id": "CRA-11", "name": "Superior angle", "bone": 1 }
+    "fields": { "landmark_id": "CRA-11", "name": "Left zygomatic", "bone": 1 }
   },
   {
     "model": "api.landmark",
     "pk": 12,
-    "fields": { "landmark_id": "CRA-12", "name": "Left nasal", "bone": 8 }
+    "fields": { "landmark_id": "CRA-12", "name": "Right zygomatic", "bone": 1 }
   },
   {
     "model": "api.landmark",
     "pk": 13,
-    "fields": { "landmark_id": "CRA-13", "name": "Right nasal", "bone": 8 }
+    "fields": {
+      "landmark_id": "CRA-13",
+      "name": "Left parietal eminence",
+      "bone": 1
+    }
   },
   {
     "model": "api.landmark",
     "pk": 14,
-    "fields": { "landmark_id": "CRA-14", "name": "Vomer", "bone": 12 }
+    "fields": {
+      "landmark_id": "CRA-14",
+      "name": "Right parietal eminence",
+      "bone": 1
+    }
   },
   {
     "model": "api.landmark",
     "pk": 15,
     "fields": {
       "landmark_id": "CRA-15",
-      "name": "Left infraorbital foramen",
-      "bone": 5
+      "name": "Left coronal suture",
+      "bone": 1
     }
   },
   {
@@ -115,8 +115,8 @@
     "pk": 16,
     "fields": {
       "landmark_id": "CRA-16",
-      "name": "Right infraorbital foramen",
-      "bone": 5
+      "name": "Right coronal suture",
+      "bone": 1
     }
   },
   {
@@ -124,8 +124,8 @@
     "pk": 17,
     "fields": {
       "landmark_id": "CRA-17",
-      "name": "Left anterior nasal spine",
-      "bone": 5
+      "name": "Left inferior temporal line",
+      "bone": 1
     }
   },
   {
@@ -133,22 +133,26 @@
     "pk": 18,
     "fields": {
       "landmark_id": "CRA-18",
-      "name": "Right anterior nasal spine",
-      "bone": 5
+      "name": "Right inferior temporal line",
+      "bone": 1
     }
   },
   {
     "model": "api.landmark",
     "pk": 19,
-    "fields": { "landmark_id": "CRA-19", "name": "Left nasal notch", "bone": 5 }
+    "fields": {
+      "landmark_id": "CRA-19",
+      "name": "Left squamous suture",
+      "bone": 1
+    }
   },
   {
     "model": "api.landmark",
     "pk": 20,
     "fields": {
       "landmark_id": "CRA-20",
-      "name": "Right nasal notch",
-      "bone": 5
+      "name": "Right squamous suture",
+      "bone": 1
     }
   },
   {
@@ -156,8 +160,8 @@
     "pk": 21,
     "fields": {
       "landmark_id": "CRA-21",
-      "name": "Left frontal process",
-      "bone": 5
+      "name": "Left lambdoid suture",
+      "bone": 1
     }
   },
   {
@@ -165,8 +169,8 @@
     "pk": 22,
     "fields": {
       "landmark_id": "CRA-22",
-      "name": "Right frontal process",
-      "bone": 5
+      "name": "Right lambdoid suture",
+      "bone": 1
     }
   },
   {
@@ -174,8 +178,8 @@
     "pk": 23,
     "fields": {
       "landmark_id": "CRA-23",
-      "name": "Left palatine process",
-      "bone": 5
+      "name": "Left squamous portion (temporal)",
+      "bone": 1
     }
   },
   {
@@ -183,8 +187,8 @@
     "pk": 24,
     "fields": {
       "landmark_id": "CRA-24",
-      "name": "Right palatine process",
-      "bone": 5
+      "name": "Right squamous portion (temporal)",
+      "bone": 1
     }
   },
   {
@@ -192,8 +196,8 @@
     "pk": 25,
     "fields": {
       "landmark_id": "CRA-25",
-      "name": "Left zygomatic process",
-      "bone": 6
+      "name": "Left mastoid process",
+      "bone": 1
     }
   },
   {
@@ -201,8 +205,8 @@
     "pk": 26,
     "fields": {
       "landmark_id": "CRA-26",
-      "name": "Right zygomatic process",
-      "bone": 6
+      "name": "Right mastoid process",
+      "bone": 1
     }
   },
   {
@@ -210,8 +214,8 @@
     "pk": 27,
     "fields": {
       "landmark_id": "CRA-27",
-      "name": "Left masseteric origin",
-      "bone": 6
+      "name": "Left styloid process",
+      "bone": 1
     }
   },
   {
@@ -219,8 +223,8 @@
     "pk": 28,
     "fields": {
       "landmark_id": "CRA-28",
-      "name": "Right masseteric origin",
-      "bone": 6
+      "name": "Right styloid process",
+      "bone": 1
     }
   },
   {
@@ -228,8 +232,8 @@
     "pk": 29,
     "fields": {
       "landmark_id": "CRA-29",
-      "name": "Left frontal process",
-      "bone": 6
+      "name": "Left mandibular fossa",
+      "bone": 1
     }
   },
   {
@@ -237,8 +241,8 @@
     "pk": 30,
     "fields": {
       "landmark_id": "CRA-30",
-      "name": "Right frontal process",
-      "bone": 6
+      "name": "Right mandibular fossa",
+      "bone": 1
     }
   },
   {
@@ -246,8 +250,8 @@
     "pk": 31,
     "fields": {
       "landmark_id": "CRA-31",
-      "name": "Left frontal angle",
-      "bone": 2
+      "name": "Left external auditory meatus",
+      "bone": 1
     }
   },
   {
@@ -255,8 +259,8 @@
     "pk": 32,
     "fields": {
       "landmark_id": "CRA-32",
-      "name": "Right frontal angle",
-      "bone": 2
+      "name": "Right external auditory meatus",
+      "bone": 1
     }
   },
   {
@@ -264,8 +268,8 @@
     "pk": 33,
     "fields": {
       "landmark_id": "CRA-33",
-      "name": "Left occipital angle",
-      "bone": 2
+      "name": "Left zygomatic process (temporal)",
+      "bone": 1
     }
   },
   {
@@ -273,8 +277,8 @@
     "pk": 34,
     "fields": {
       "landmark_id": "CRA-34",
-      "name": "Right occipital angle",
-      "bone": 2
+      "name": "Right zygomatic process (temporal)",
+      "bone": 1
     }
   },
   {
@@ -282,8 +286,8 @@
     "pk": 35,
     "fields": {
       "landmark_id": "CRA-35",
-      "name": "Left mastoid angle",
-      "bone": 2
+      "name": "Left palatine process",
+      "bone": 1
     }
   },
   {
@@ -291,8 +295,8 @@
     "pk": 36,
     "fields": {
       "landmark_id": "CRA-36",
-      "name": "Right mastoid angle",
-      "bone": 2
+      "name": "Right palatine process",
+      "bone": 1
     }
   },
   {
@@ -300,8 +304,8 @@
     "pk": 37,
     "fields": {
       "landmark_id": "CRA-37",
-      "name": "Left sphenoid angle",
-      "bone": 2
+      "name": "Left palatine bone",
+      "bone": 1
     }
   },
   {
@@ -309,26 +313,22 @@
     "pk": 38,
     "fields": {
       "landmark_id": "CRA-38",
-      "name": "Right sphenoid angle",
-      "bone": 2
+      "name": "Right palatine bone",
+      "bone": 1
     }
   },
   {
     "model": "api.landmark",
     "pk": 39,
-    "fields": {
-      "landmark_id": "CRA-39",
-      "name": "Left superior temporal line",
-      "bone": 2
-    }
+    "fields": { "landmark_id": "CRA-39", "name": "Foramen magnum", "bone": 1 }
   },
   {
     "model": "api.landmark",
     "pk": 40,
     "fields": {
       "landmark_id": "CRA-40",
-      "name": "Right superior temporal line",
-      "bone": 2
+      "name": "Left occipital condyle",
+      "bone": 1
     }
   },
   {
@@ -336,8 +336,8 @@
     "pk": 41,
     "fields": {
       "landmark_id": "CRA-41",
-      "name": "Left temporal squamous portion",
-      "bone": 3
+      "name": "Right occipital condyle",
+      "bone": 1
     }
   },
   {
@@ -345,8 +345,8 @@
     "pk": 42,
     "fields": {
       "landmark_id": "CRA-42",
-      "name": "Right temporal squamous portion",
-      "bone": 3
+      "name": "External occipital protuberance",
+      "bone": 1
     }
   },
   {
@@ -354,8 +354,8 @@
     "pk": 43,
     "fields": {
       "landmark_id": "CRA-43",
-      "name": "Left mastoid process",
-      "bone": 3
+      "name": "Inferior nuchal line",
+      "bone": 1
     }
   },
   {
@@ -363,8 +363,8 @@
     "pk": 44,
     "fields": {
       "landmark_id": "CRA-44",
-      "name": "Right mastoid process",
-      "bone": 3
+      "name": "Superior nuchal line",
+      "bone": 1
     }
   },
   {
@@ -372,8 +372,8 @@
     "pk": 45,
     "fields": {
       "landmark_id": "CRA-45",
-      "name": "Left styloid process",
-      "bone": 3
+      "name": "Left petrous portion",
+      "bone": 1
     }
   },
   {
@@ -381,8 +381,8 @@
     "pk": 46,
     "fields": {
       "landmark_id": "CRA-46",
-      "name": "Right styloid process",
-      "bone": 3
+      "name": "Right petrous portion",
+      "bone": 1
     }
   },
   {
@@ -390,8 +390,8 @@
     "pk": 47,
     "fields": {
       "landmark_id": "CRA-47",
-      "name": "Left mandibular fossa",
-      "bone": 3
+      "name": "Left greater wing of sphenoid",
+      "bone": 1
     }
   },
   {
@@ -399,26 +399,22 @@
     "pk": 48,
     "fields": {
       "landmark_id": "CRA-48",
-      "name": "Right mandibular fossa",
-      "bone": 3
+      "name": "Right greater wing of sphenoid",
+      "bone": 1
     }
   },
   {
     "model": "api.landmark",
     "pk": 49,
-    "fields": {
-      "landmark_id": "CRA-49",
-      "name": "Left external auditory meatus",
-      "bone": 3
-    }
+    "fields": { "landmark_id": "CRA-49", "name": "Sella turcica", "bone": 1 }
   },
   {
     "model": "api.landmark",
     "pk": 50,
     "fields": {
       "landmark_id": "CRA-50",
-      "name": "Right external auditory meatus",
-      "bone": 3
+      "name": "Left foramen ovale",
+      "bone": 1
     }
   },
   {
@@ -426,25 +422,21 @@
     "pk": 51,
     "fields": {
       "landmark_id": "CRA-51",
-      "name": "Left zygomatic root",
-      "bone": 3
+      "name": "Right foramen ovale",
+      "bone": 1
     }
   },
   {
     "model": "api.landmark",
     "pk": 52,
-    "fields": {
-      "landmark_id": "CRA-52",
-      "name": "Right zygomatic root",
-      "bone": 3
-    }
+    "fields": { "landmark_id": "CRA-52", "name": "Crista galli", "bone": 1 }
   },
   {
     "model": "api.landmark",
     "pk": 53,
     "fields": {
-      "landmark_id": "CRA-53",
-      "name": "Left zygomatic process",
+      "landmark_id": "MND-01",
+      "name": "Left horizontal ramus",
       "bone": 3
     }
   },
@@ -452,26 +444,22 @@
     "model": "api.landmark",
     "pk": 54,
     "fields": {
-      "landmark_id": "CRA-54",
-      "name": "Right zygomatic process",
+      "landmark_id": "MND-02",
+      "name": "Right horizontal ramus",
       "bone": 3
     }
   },
   {
     "model": "api.landmark",
     "pk": 55,
-    "fields": {
-      "landmark_id": "CRA-55",
-      "name": "Left petrous portion",
-      "bone": 3
-    }
+    "fields": { "landmark_id": "MND-03", "name": "Mental eminence", "bone": 3 }
   },
   {
     "model": "api.landmark",
     "pk": 56,
     "fields": {
-      "landmark_id": "CRA-56",
-      "name": "Right petrous portion",
+      "landmark_id": "MND-04",
+      "name": "Left mental foramen",
       "bone": 3
     }
   },
@@ -479,8 +467,8 @@
     "model": "api.landmark",
     "pk": 57,
     "fields": {
-      "landmark_id": "CRA-57",
-      "name": "Left mastoid foramen",
+      "landmark_id": "MND-05",
+      "name": "Right mental foramen",
       "bone": 3
     }
   },
@@ -488,8 +476,8 @@
     "model": "api.landmark",
     "pk": 58,
     "fields": {
-      "landmark_id": "CRA-58",
-      "name": "Right mastoid foramen",
+      "landmark_id": "MND-06",
+      "name": "Left coronoid process",
       "bone": 3
     }
   },
@@ -497,76 +485,68 @@
     "model": "api.landmark",
     "pk": 59,
     "fields": {
-      "landmark_id": "CRA-59",
-      "name": "Left palatine bone",
-      "bone": 10
+      "landmark_id": "MND-07",
+      "name": "Right coronoid process",
+      "bone": 3
     }
   },
   {
     "model": "api.landmark",
     "pk": 60,
     "fields": {
-      "landmark_id": "CRA-60",
-      "name": "Right palatine bone",
-      "bone": 10
+      "landmark_id": "MND-08",
+      "name": "Left mandibular condyle",
+      "bone": 3
     }
   },
   {
     "model": "api.landmark",
     "pk": 61,
     "fields": {
-      "landmark_id": "CRA-61",
-      "name": "Basilar part of occipital",
-      "bone": 4
+      "landmark_id": "MND-09",
+      "name": "Right mandibular condyle",
+      "bone": 3
     }
   },
   {
     "model": "api.landmark",
     "pk": 62,
-    "fields": {
-      "landmark_id": "CRA-62",
-      "name": "Posterior foramen magnum",
-      "bone": 4
-    }
+    "fields": { "landmark_id": "MND-10", "name": "Left ramus", "bone": 3 }
   },
   {
     "model": "api.landmark",
     "pk": 63,
-    "fields": {
-      "landmark_id": "CRA-63",
-      "name": "Left occipital condyle",
-      "bone": 4
-    }
+    "fields": { "landmark_id": "MND-11", "name": "Right ramus", "bone": 3 }
   },
   {
     "model": "api.landmark",
     "pk": 64,
     "fields": {
-      "landmark_id": "CRA-64",
-      "name": "Right occipital condyle",
-      "bone": 4
+      "landmark_id": "MND-12",
+      "name": "Left gonial angle",
+      "bone": 3
     }
   },
   {
     "model": "api.landmark",
     "pk": 65,
-    "fields": { "landmark_id": "CRA-65", "name": "Nuchal crest", "bone": 4 }
+    "fields": {
+      "landmark_id": "MND-13",
+      "name": "Right gonial angle",
+      "bone": 3
+    }
   },
   {
     "model": "api.landmark",
     "pk": 66,
-    "fields": {
-      "landmark_id": "CRA-66",
-      "name": "Medium nuchal line",
-      "bone": 4
-    }
+    "fields": { "landmark_id": "C1-01", "name": "Anterior arch", "bone": 4 }
   },
   {
     "model": "api.landmark",
     "pk": 67,
     "fields": {
-      "landmark_id": "CRA-67",
-      "name": "Left superior nuchal line",
+      "landmark_id": "C1-02",
+      "name": "Left transverse process",
       "bone": 4
     }
   },
@@ -574,22 +554,26 @@
     "model": "api.landmark",
     "pk": 68,
     "fields": {
-      "landmark_id": "CRA-68",
-      "name": "Right superior nuchal line",
+      "landmark_id": "C1-03",
+      "name": "Right transverse process",
       "bone": 4
     }
   },
   {
     "model": "api.landmark",
     "pk": 69,
-    "fields": { "landmark_id": "CRA-69", "name": "Superior angle", "bone": 4 }
+    "fields": {
+      "landmark_id": "C1-04",
+      "name": "Left superior articular process",
+      "bone": 4
+    }
   },
   {
     "model": "api.landmark",
     "pk": 70,
     "fields": {
-      "landmark_id": "CRA-70",
-      "name": "Left lateral angle",
+      "landmark_id": "C1-05",
+      "name": "Right superior articular process",
       "bone": 4
     }
   },
@@ -597,8 +581,8 @@
     "model": "api.landmark",
     "pk": 71,
     "fields": {
-      "landmark_id": "CRA-71",
-      "name": "Right lateral angle",
+      "landmark_id": "C1-06",
+      "name": "Left inferior articular process",
       "bone": 4
     }
   },
@@ -606,1439 +590,1366 @@
     "model": "api.landmark",
     "pk": 72,
     "fields": {
-      "landmark_id": "CRA-72",
-      "name": "Left sphenoid greater wing",
-      "bone": 7
+      "landmark_id": "C1-07",
+      "name": "Right inferior articular process",
+      "bone": 4
     }
   },
   {
     "model": "api.landmark",
     "pk": 73,
-    "fields": {
-      "landmark_id": "CRA-73",
-      "name": "Right sphenoid greater wing",
-      "bone": 7
-    }
+    "fields": { "landmark_id": "C1-08", "name": "Left lamina", "bone": 4 }
   },
   {
     "model": "api.landmark",
     "pk": 74,
-    "fields": { "landmark_id": "CRA-74", "name": "Sella turcica", "bone": 7 }
+    "fields": { "landmark_id": "C1-09", "name": "Right lamina", "bone": 4 }
   },
   {
     "model": "api.landmark",
     "pk": 75,
-    "fields": {
-      "landmark_id": "CRA-75",
-      "name": "Left foramen ovale",
-      "bone": 7
-    }
+    "fields": { "landmark_id": "C1-10", "name": "Posterior arch", "bone": 4 }
   },
   {
     "model": "api.landmark",
     "pk": 76,
-    "fields": {
-      "landmark_id": "CRA-76",
-      "name": "Right foramen ovale",
-      "bone": 7
-    }
+    "fields": { "landmark_id": "C2-01", "name": "Body", "bone": 5 }
   },
   {
     "model": "api.landmark",
     "pk": 77,
-    "fields": { "landmark_id": "CRA-77", "name": "Crista galli", "bone": 13 }
+    "fields": { "landmark_id": "C2-02", "name": "Dens", "bone": 5 }
   },
   {
     "model": "api.landmark",
     "pk": 78,
-    "fields": { "landmark_id": "CRA-78", "name": "Left lacrimal", "bone": 9 }
+    "fields": {
+      "landmark_id": "C2-03",
+      "name": "Left transverse process",
+      "bone": 5
+    }
   },
   {
     "model": "api.landmark",
     "pk": 79,
-    "fields": { "landmark_id": "CRA-79", "name": "Right lacrimal", "bone": 9 }
+    "fields": {
+      "landmark_id": "C2-04",
+      "name": "Right transverse process",
+      "bone": 5
+    }
   },
   {
     "model": "api.landmark",
     "pk": 80,
-    "fields": {
-      "landmark_id": "CRA-80",
-      "name": "Left inferior nasal concha",
-      "bone": 11
-    }
+    "fields": { "landmark_id": "C2-05", "name": "Left pedicle", "bone": 5 }
   },
   {
     "model": "api.landmark",
     "pk": 81,
-    "fields": {
-      "landmark_id": "CRA-81",
-      "name": "Right inferior nasal concha",
-      "bone": 11
-    }
+    "fields": { "landmark_id": "C2-06", "name": "Right pedicle", "bone": 5 }
   },
   {
     "model": "api.landmark",
     "pk": 82,
-    "fields": { "landmark_id": "CRA-82", "name": "Hyoid body", "bone": 14 }
+    "fields": {
+      "landmark_id": "C2-07",
+      "name": "Left superior articular process",
+      "bone": 5
+    }
   },
   {
     "model": "api.landmark",
     "pk": 83,
-    "fields": { "landmark_id": "CRA-83", "name": "Left hyoid horn", "bone": 14 }
+    "fields": {
+      "landmark_id": "C2-08",
+      "name": "Right superior articular process",
+      "bone": 5
+    }
   },
   {
     "model": "api.landmark",
     "pk": 84,
     "fields": {
-      "landmark_id": "CRA-84",
-      "name": "Right hyoid horn",
-      "bone": 14
+      "landmark_id": "C2-09",
+      "name": "Left inferior articular process",
+      "bone": 5
     }
   },
   {
     "model": "api.landmark",
     "pk": 85,
-    "fields": { "landmark_id": "ALV", "name": "Alveolar process", "bone": 15 }
+    "fields": {
+      "landmark_id": "C2-10",
+      "name": "Right inferior articular process",
+      "bone": 5
+    }
   },
   {
     "model": "api.landmark",
     "pk": 86,
-    "fields": { "landmark_id": "MND-01", "name": "Mental eminence", "bone": 16 }
+    "fields": { "landmark_id": "C2-11", "name": "Left lamina", "bone": 5 }
   },
   {
     "model": "api.landmark",
     "pk": 87,
-    "fields": {
-      "landmark_id": "MND-02",
-      "name": "Left mental foramen",
-      "bone": 16
-    }
+    "fields": { "landmark_id": "C2-12", "name": "Right lamina", "bone": 5 }
   },
   {
     "model": "api.landmark",
     "pk": 88,
-    "fields": {
-      "landmark_id": "MND-03",
-      "name": "Right mental foramen",
-      "bone": 16
-    }
+    "fields": { "landmark_id": "C2-13", "name": "Spinous process", "bone": 5 }
   },
   {
     "model": "api.landmark",
     "pk": 89,
-    "fields": {
-      "landmark_id": "MND-04",
-      "name": "Left horizontal ramus",
-      "bone": 16
-    }
+    "fields": { "landmark_id": "RIB-01", "name": "Head", "bone": 6 }
   },
   {
     "model": "api.landmark",
     "pk": 90,
-    "fields": {
-      "landmark_id": "MND-05",
-      "name": "Right horizontal ramus",
-      "bone": 16
-    }
+    "fields": { "landmark_id": "RIB-02", "name": "Tubercle", "bone": 6 }
   },
   {
     "model": "api.landmark",
     "pk": 91,
-    "fields": {
-      "landmark_id": "MND-06",
-      "name": "Left gonial angle",
-      "bone": 16
-    }
+    "fields": { "landmark_id": "RIB-03", "name": "Shaft", "bone": 6 }
   },
   {
     "model": "api.landmark",
     "pk": 92,
-    "fields": {
-      "landmark_id": "MND-07",
-      "name": "Right gonial angle",
-      "bone": 16
-    }
+    "fields": { "landmark_id": "RIB-04", "name": "Sternal end", "bone": 6 }
   },
   {
     "model": "api.landmark",
     "pk": 93,
-    "fields": { "landmark_id": "MND-08", "name": "Left ramus", "bone": 16 }
+    "fields": { "landmark_id": "STN-01", "name": "Manubrium", "bone": 7 }
   },
   {
     "model": "api.landmark",
     "pk": 94,
-    "fields": { "landmark_id": "MND-09", "name": "Right ramus", "bone": 16 }
+    "fields": { "landmark_id": "STN-02", "name": "Sternal body", "bone": 7 }
   },
   {
     "model": "api.landmark",
     "pk": 95,
-    "fields": {
-      "landmark_id": "MND-10",
-      "name": "Left ramus foramen",
-      "bone": 16
-    }
+    "fields": { "landmark_id": "STN-03", "name": "Xiphoid process", "bone": 7 }
   },
   {
     "model": "api.landmark",
     "pk": 96,
-    "fields": {
-      "landmark_id": "MND-11",
-      "name": "Right ramus foramen",
-      "bone": 16
-    }
+    "fields": { "landmark_id": "CLA-01", "name": "Acromial end", "bone": 8 }
   },
   {
     "model": "api.landmark",
     "pk": 97,
-    "fields": {
-      "landmark_id": "MND-12",
-      "name": "Left coronoid process",
-      "bone": 16
-    }
+    "fields": { "landmark_id": "CLA-02", "name": "Conoid tubercle", "bone": 8 }
   },
   {
     "model": "api.landmark",
     "pk": 98,
-    "fields": {
-      "landmark_id": "MND-13",
-      "name": "Right coronoid process",
-      "bone": 16
-    }
+    "fields": { "landmark_id": "CLA-03", "name": "Deltoid tubercle", "bone": 8 }
   },
   {
     "model": "api.landmark",
     "pk": 99,
-    "fields": {
-      "landmark_id": "MND-14",
-      "name": "Left mandibular condyle",
-      "bone": 16
-    }
+    "fields": { "landmark_id": "CLA-04", "name": "Shaft", "bone": 8 }
   },
   {
     "model": "api.landmark",
     "pk": 100,
-    "fields": {
-      "landmark_id": "MND-15",
-      "name": "Right mandibular condyle",
-      "bone": 16
-    }
+    "fields": { "landmark_id": "CLA-05", "name": "Sternal end", "bone": 8 }
   },
   {
     "model": "api.landmark",
     "pk": 101,
     "fields": {
-      "landmark_id": "C1-01",
-      "name": "Anterior arch (fovea)",
-      "bone": 17
+      "landmark_id": "CLA-06",
+      "name": "Costoclavicular impression",
+      "bone": 8
     }
   },
   {
     "model": "api.landmark",
     "pk": 102,
-    "fields": { "landmark_id": "C1-02", "name": "Posterior arch", "bone": 17 }
+    "fields": { "landmark_id": "SCA-01", "name": "Acromion", "bone": 9 }
   },
   {
     "model": "api.landmark",
     "pk": 103,
-    "fields": {
-      "landmark_id": "C1-03",
-      "name": "Left lamina (vertebral groove)",
-      "bone": 17
-    }
+    "fields": { "landmark_id": "SCA-02", "name": "Coracoid process", "bone": 9 }
   },
   {
     "model": "api.landmark",
     "pk": 104,
     "fields": {
-      "landmark_id": "C1-04",
-      "name": "Right lamina (vertebral groove)",
-      "bone": 17
+      "landmark_id": "SCA-03",
+      "name": "Spinoglenoid notch",
+      "bone": 9
     }
   },
   {
     "model": "api.landmark",
     "pk": 105,
-    "fields": {
-      "landmark_id": "C1-05",
-      "name": "Left transverse process",
-      "bone": 17
-    }
+    "fields": { "landmark_id": "SCA-04", "name": "Glenoid fossa", "bone": 9 }
   },
   {
     "model": "api.landmark",
     "pk": 106,
-    "fields": {
-      "landmark_id": "C1-06",
-      "name": "Right transverse process",
-      "bone": 17
-    }
+    "fields": { "landmark_id": "SCA-05", "name": "Superior border", "bone": 9 }
   },
   {
     "model": "api.landmark",
     "pk": 107,
-    "fields": {
-      "landmark_id": "C1-07",
-      "name": "Left superior articular process",
-      "bone": 17
-    }
+    "fields": { "landmark_id": "SCA-06", "name": "Scapular neck", "bone": 9 }
   },
   {
     "model": "api.landmark",
     "pk": 108,
-    "fields": {
-      "landmark_id": "C1-08",
-      "name": "Right superior articular process",
-      "bone": 17
-    }
+    "fields": { "landmark_id": "SCA-07", "name": "Scapular spine", "bone": 9 }
   },
   {
     "model": "api.landmark",
     "pk": 109,
-    "fields": {
-      "landmark_id": "C1-09",
-      "name": "Left inferior articular process",
-      "bone": 17
-    }
+    "fields": { "landmark_id": "SCA-08", "name": "Body", "bone": 9 }
   },
   {
     "model": "api.landmark",
     "pk": 110,
-    "fields": {
-      "landmark_id": "C1-10",
-      "name": "Right inferior articular process",
-      "bone": 17
-    }
+    "fields": { "landmark_id": "SCA-09", "name": "Medial border", "bone": 9 }
   },
   {
     "model": "api.landmark",
     "pk": 111,
-    "fields": { "landmark_id": "C2-01", "name": "Body", "bone": 18 }
+    "fields": { "landmark_id": "SCA-10", "name": "Lateral border", "bone": 9 }
   },
   {
     "model": "api.landmark",
     "pk": 112,
-    "fields": { "landmark_id": "C2-02", "name": "Dens", "bone": 18 }
+    "fields": { "landmark_id": "SCA-11", "name": "Inferior angle", "bone": 9 }
   },
   {
     "model": "api.landmark",
     "pk": 113,
-    "fields": {
-      "landmark_id": "C2-03",
-      "name": "Left transverse process",
-      "bone": 18
-    }
+    "fields": { "landmark_id": "HUM-01", "name": "Head", "bone": 10 }
   },
   {
     "model": "api.landmark",
     "pk": 114,
-    "fields": {
-      "landmark_id": "C2-04",
-      "name": "Right transverse process",
-      "bone": 18
-    }
+    "fields": { "landmark_id": "HUM-02", "name": "Surgical neck", "bone": 10 }
   },
   {
     "model": "api.landmark",
     "pk": 115,
-    "fields": { "landmark_id": "C2-05", "name": "Left pedicle", "bone": 18 }
+    "fields": {
+      "landmark_id": "HUM-03",
+      "name": "Greater tubercle",
+      "bone": 10
+    }
   },
   {
     "model": "api.landmark",
     "pk": 116,
-    "fields": { "landmark_id": "C2-06", "name": "Right pedicle", "bone": 18 }
+    "fields": { "landmark_id": "HUM-04", "name": "Lesser tubercle", "bone": 10 }
   },
   {
     "model": "api.landmark",
     "pk": 117,
     "fields": {
-      "landmark_id": "C2-07",
-      "name": "Left superior articular process",
-      "bone": 18
+      "landmark_id": "HUM-05",
+      "name": "Deltoid tuberosity",
+      "bone": 10
     }
   },
   {
     "model": "api.landmark",
     "pk": 118,
     "fields": {
-      "landmark_id": "C2-08",
-      "name": "Right superior articular process",
-      "bone": 18
+      "landmark_id": "HUM-06",
+      "name": "Distal 1/2 of shaft",
+      "bone": 10
     }
   },
   {
     "model": "api.landmark",
     "pk": 119,
-    "fields": {
-      "landmark_id": "C2-09",
-      "name": "Left inferior articular process",
-      "bone": 18
-    }
+    "fields": { "landmark_id": "HUM-07", "name": "Capitulum", "bone": 10 }
   },
   {
     "model": "api.landmark",
     "pk": 120,
-    "fields": {
-      "landmark_id": "C2-10",
-      "name": "Right inferior articular process",
-      "bone": 18
-    }
+    "fields": { "landmark_id": "HUM-08", "name": "Trochlea", "bone": 10 }
   },
   {
     "model": "api.landmark",
     "pk": 121,
-    "fields": { "landmark_id": "C2-11", "name": "Left lamina", "bone": 18 }
+    "fields": {
+      "landmark_id": "HUM-09",
+      "name": "Lateral epicondyle",
+      "bone": 10
+    }
   },
   {
     "model": "api.landmark",
     "pk": 122,
-    "fields": { "landmark_id": "C2-12", "name": "Right lamina", "bone": 18 }
+    "fields": {
+      "landmark_id": "HUM-10",
+      "name": "Medial epicondyle",
+      "bone": 10
+    }
   },
   {
     "model": "api.landmark",
     "pk": 123,
-    "fields": { "landmark_id": "C2-13", "name": "Spinous process", "bone": 18 }
+    "fields": { "landmark_id": "HUM-11", "name": "Olecranon fossa", "bone": 10 }
   },
   {
     "model": "api.landmark",
     "pk": 124,
-    "fields": { "landmark_id": "RIB-01", "name": "Head", "bone": 19 }
+    "fields": { "landmark_id": "HUM-12", "name": "Coronoid fossa", "bone": 10 }
   },
   {
     "model": "api.landmark",
     "pk": 125,
-    "fields": { "landmark_id": "RIB-02", "name": "Tubercle", "bone": 19 }
+    "fields": {
+      "landmark_id": "HUM-13",
+      "name": "Lateral supracondylar ridge",
+      "bone": 10
+    }
   },
   {
     "model": "api.landmark",
     "pk": 126,
-    "fields": { "landmark_id": "RIB-03", "name": "Shaft", "bone": 19 }
+    "fields": {
+      "landmark_id": "HUM-14",
+      "name": "Medial supracondylar ridge",
+      "bone": 10
+    }
   },
   {
     "model": "api.landmark",
     "pk": 127,
-    "fields": { "landmark_id": "RIB-04", "name": "Sternal end", "bone": 19 }
+    "fields": {
+      "landmark_id": "HUM-15",
+      "name": "Flattened posterior surface of distal humerus",
+      "bone": 10
+    }
   },
   {
     "model": "api.landmark",
     "pk": 128,
-    "fields": { "landmark_id": "STN-01", "name": "Jugular notch", "bone": 20 }
+    "fields": { "landmark_id": "RAD-01", "name": "Head", "bone": 11 }
   },
   {
     "model": "api.landmark",
     "pk": 129,
-    "fields": {
-      "landmark_id": "STN-02",
-      "name": "Left clavicular notch",
-      "bone": 20
-    }
+    "fields": { "landmark_id": "RAD-02", "name": "Neck", "bone": 11 }
   },
   {
     "model": "api.landmark",
     "pk": 130,
     "fields": {
-      "landmark_id": "STN-03",
-      "name": "Right clavicular notch",
-      "bone": 20
+      "landmark_id": "RAD-03",
+      "name": "Radial tuberosity",
+      "bone": 11
     }
   },
   {
     "model": "api.landmark",
     "pk": 131,
     "fields": {
-      "landmark_id": "STN-04",
-      "name": "Left first rib notch",
-      "bone": 20
+      "landmark_id": "RAD-04",
+      "name": "Distal 1/2 of shaft",
+      "bone": 11
     }
   },
   {
     "model": "api.landmark",
     "pk": 132,
-    "fields": {
-      "landmark_id": "STN-05",
-      "name": "Right first rib notch",
-      "bone": 20
-    }
+    "fields": { "landmark_id": "RAD-05", "name": "Styloid process", "bone": 11 }
   },
   {
     "model": "api.landmark",
     "pk": 133,
     "fields": {
-      "landmark_id": "STN-06",
-      "name": "Inferior border of manubrium",
-      "bone": 20
+      "landmark_id": "RAD-06",
+      "name": "Distal articular surface",
+      "bone": 11
     }
   },
   {
     "model": "api.landmark",
     "pk": 134,
-    "fields": {
-      "landmark_id": "STN-07",
-      "name": "Superior border of sternal body",
-      "bone": 20
-    }
+    "fields": { "landmark_id": "RAD-07", "name": "Oblique line", "bone": 11 }
   },
   {
     "model": "api.landmark",
     "pk": 135,
     "fields": {
-      "landmark_id": "STN-08",
-      "name": "Inferior border of sternal body",
-      "bone": 20
+      "landmark_id": "ULN-01",
+      "name": "Olecranon process",
+      "bone": 12
     }
   },
   {
     "model": "api.landmark",
     "pk": 136,
-    "fields": { "landmark_id": "STN-09", "name": "Xyphoid", "bone": 20 }
+    "fields": { "landmark_id": "ULN-02", "name": "Trochlear notch", "bone": 12 }
   },
   {
     "model": "api.landmark",
     "pk": 137,
-    "fields": { "landmark_id": "CLA-01", "name": "Acromial end", "bone": 21 }
+    "fields": {
+      "landmark_id": "ULN-03",
+      "name": "Coronoid process",
+      "bone": 12
+    }
   },
   {
     "model": "api.landmark",
     "pk": 138,
-    "fields": { "landmark_id": "CLA-02", "name": "Conoid tubercle", "bone": 21 }
+    "fields": { "landmark_id": "ULN-04", "name": "Radial notch", "bone": 12 }
   },
   {
     "model": "api.landmark",
     "pk": 139,
     "fields": {
-      "landmark_id": "CLA-03",
-      "name": "Deltoid tubercle",
-      "bone": 21
+      "landmark_id": "ULN-05",
+      "name": "Distal 2/3 of shaft",
+      "bone": 12
     }
   },
   {
     "model": "api.landmark",
     "pk": 140,
-    "fields": { "landmark_id": "CLA-04", "name": "Shaft", "bone": 21 }
+    "fields": { "landmark_id": "ULN-06", "name": "Ulnar head", "bone": 12 }
   },
   {
     "model": "api.landmark",
     "pk": 141,
-    "fields": { "landmark_id": "CLA-05", "name": "Sternal end", "bone": 21 }
+    "fields": { "landmark_id": "ULN-07", "name": "Styloid process", "bone": 12 }
   },
   {
     "model": "api.landmark",
     "pk": 142,
-    "fields": {
-      "landmark_id": "CLA-06",
-      "name": "Costoclavicular impression",
-      "bone": 21
-    }
+    "fields": { "landmark_id": "ULN-08", "name": "Supinator crest", "bone": 12 }
   },
   {
     "model": "api.landmark",
     "pk": 143,
-    "fields": { "landmark_id": "SCA-01", "name": "Acromion", "bone": 22 }
+    "fields": { "landmark_id": "MAN-01", "name": "Scaphoid", "bone": 13 }
   },
   {
     "model": "api.landmark",
     "pk": 144,
-    "fields": {
-      "landmark_id": "SCA-02",
-      "name": "Coracoid process",
-      "bone": 22
-    }
+    "fields": { "landmark_id": "MAN-02", "name": "Lunate", "bone": 13 }
   },
   {
     "model": "api.landmark",
     "pk": 145,
-    "fields": {
-      "landmark_id": "SCA-03",
-      "name": "Spino-glenoid notch",
-      "bone": 22
-    }
+    "fields": { "landmark_id": "MAN-03", "name": "Triquetral", "bone": 13 }
   },
   {
     "model": "api.landmark",
     "pk": 146,
-    "fields": { "landmark_id": "SCA-04", "name": "Glenoid fossa", "bone": 22 }
+    "fields": { "landmark_id": "MAN-04", "name": "Pisiform", "bone": 13 }
   },
   {
     "model": "api.landmark",
     "pk": 147,
-    "fields": { "landmark_id": "SCA-05", "name": "Superior angle", "bone": 22 }
+    "fields": { "landmark_id": "MAN-05", "name": "Trapezium", "bone": 13 }
   },
   {
     "model": "api.landmark",
     "pk": 148,
-    "fields": { "landmark_id": "SCA-06", "name": "Scapular neck", "bone": 22 }
+    "fields": { "landmark_id": "MAN-06", "name": "Trapezoid", "bone": 13 }
   },
   {
     "model": "api.landmark",
     "pk": 149,
-    "fields": { "landmark_id": "SCA-07", "name": "Spine", "bone": 22 }
+    "fields": { "landmark_id": "MAN-07", "name": "Capitate", "bone": 13 }
   },
   {
     "model": "api.landmark",
     "pk": 150,
-    "fields": { "landmark_id": "SCA-08", "name": "Medial angle", "bone": 22 }
+    "fields": { "landmark_id": "MAN-08", "name": "Hamate", "bone": 13 }
   },
   {
     "model": "api.landmark",
     "pk": 151,
-    "fields": { "landmark_id": "SCA-09", "name": "Medial border", "bone": 22 }
+    "fields": { "landmark_id": "MAN-09", "name": "MC1 base", "bone": 13 }
   },
   {
     "model": "api.landmark",
     "pk": 152,
-    "fields": { "landmark_id": "SCA-10", "name": "Lateral border", "bone": 22 }
+    "fields": { "landmark_id": "MAN-10", "name": "MC1 head", "bone": 13 }
   },
   {
     "model": "api.landmark",
     "pk": 153,
-    "fields": { "landmark_id": "SCA-11", "name": "Inferior angle", "bone": 22 }
+    "fields": { "landmark_id": "MAN-11", "name": "MC2 base", "bone": 13 }
   },
   {
     "model": "api.landmark",
     "pk": 154,
-    "fields": { "landmark_id": "HUM-01", "name": "Head", "bone": 23 }
+    "fields": { "landmark_id": "MAN-12", "name": "MC3 base", "bone": 13 }
   },
   {
     "model": "api.landmark",
     "pk": 155,
-    "fields": { "landmark_id": "HUM-02", "name": "Surgical neck", "bone": 23 }
+    "fields": { "landmark_id": "MAN-13", "name": "MC4 base", "bone": 13 }
   },
   {
     "model": "api.landmark",
     "pk": 156,
-    "fields": {
-      "landmark_id": "HUM-03",
-      "name": "Greater tubercle",
-      "bone": 23
-    }
+    "fields": { "landmark_id": "MAN-14", "name": "MC5 base", "bone": 13 }
   },
   {
     "model": "api.landmark",
     "pk": 157,
-    "fields": { "landmark_id": "HUM-04", "name": "Lesser tubercle", "bone": 23 }
+    "fields": { "landmark_id": "PEL-01", "name": "Iliac crest", "bone": 14 }
   },
   {
     "model": "api.landmark",
     "pk": 158,
-    "fields": {
-      "landmark_id": "HUM-05",
-      "name": "Deltoid tuberosity",
-      "bone": 23
-    }
+    "fields": { "landmark_id": "PEL-02", "name": "Iliac fossa", "bone": 14 }
   },
   {
     "model": "api.landmark",
     "pk": 159,
-    "fields": { "landmark_id": "HUM-06", "name": "Capitulum", "bone": 23 }
+    "fields": {
+      "landmark_id": "PEL-03",
+      "name": "Anterior superior iliac spine",
+      "bone": 14
+    }
   },
   {
     "model": "api.landmark",
     "pk": 160,
-    "fields": { "landmark_id": "HUM-07", "name": "Trochlea", "bone": 23 }
+    "fields": {
+      "landmark_id": "PEL-04",
+      "name": "Anterior inferior iliac spine",
+      "bone": 14
+    }
   },
   {
     "model": "api.landmark",
     "pk": 161,
     "fields": {
-      "landmark_id": "HUM-08",
-      "name": "Lateral epicondyle",
-      "bone": 23
+      "landmark_id": "PEL-05",
+      "name": "Posterior superior iliac spine",
+      "bone": 14
     }
   },
   {
     "model": "api.landmark",
     "pk": 162,
-    "fields": {
-      "landmark_id": "HUM-09",
-      "name": "Medial epicondyle",
-      "bone": 23
-    }
+    "fields": { "landmark_id": "PEL-06", "name": "Acetabulum", "bone": 14 }
   },
   {
     "model": "api.landmark",
     "pk": 163,
-    "fields": { "landmark_id": "HUM-10", "name": "Olecranon fossa", "bone": 23 }
+    "fields": {
+      "landmark_id": "PEL-07",
+      "name": "Greater sciatic notch",
+      "bone": 14
+    }
   },
   {
     "model": "api.landmark",
     "pk": 164,
-    "fields": { "landmark_id": "HUM-11", "name": "Coranoid fossa", "bone": 23 }
+    "fields": {
+      "landmark_id": "PEL-08",
+      "name": "Auricular surface",
+      "bone": 14
+    }
   },
   {
     "model": "api.landmark",
     "pk": 165,
-    "fields": {
-      "landmark_id": "HUM-12",
-      "name": "Lateral supracondylar ridge",
-      "bone": 23
-    }
+    "fields": { "landmark_id": "PEL-09", "name": "Ischial spine", "bone": 14 }
   },
   {
     "model": "api.landmark",
     "pk": 166,
     "fields": {
-      "landmark_id": "HUM-13",
-      "name": "Medial supracondylar ridge",
-      "bone": 23
+      "landmark_id": "PEL-10",
+      "name": "Lesser sciatic notch",
+      "bone": 14
     }
   },
   {
     "model": "api.landmark",
     "pk": 167,
     "fields": {
-      "landmark_id": "HUM-14",
-      "name": "Flattened posterior surface of distal humerus",
-      "bone": 23
+      "landmark_id": "PEL-11",
+      "name": "Ischial tuberosity",
+      "bone": 14
     }
   },
   {
     "model": "api.landmark",
     "pk": 168,
-    "fields": { "landmark_id": "RAD-01", "name": "Head", "bone": 24 }
+    "fields": {
+      "landmark_id": "PEL-12",
+      "name": "Symphyseal face of pubis",
+      "bone": 14
+    }
   },
   {
     "model": "api.landmark",
     "pk": 169,
-    "fields": { "landmark_id": "RAD-02", "name": "Neck", "bone": 24 }
+    "fields": {
+      "landmark_id": "SAC-01",
+      "name": "Sacral promontory",
+      "bone": 15
+    }
   },
   {
     "model": "api.landmark",
     "pk": 170,
-    "fields": {
-      "landmark_id": "RAD-03",
-      "name": "Radial tuberosity",
-      "bone": 24
-    }
+    "fields": { "landmark_id": "SAC-02", "name": "Left ala", "bone": 15 }
   },
   {
     "model": "api.landmark",
     "pk": 171,
-    "fields": {
-      "landmark_id": "RAD-04",
-      "name": "Distal half of shaft",
-      "bone": 24
-    }
+    "fields": { "landmark_id": "SAC-03", "name": "Right ala", "bone": 15 }
   },
   {
     "model": "api.landmark",
     "pk": 172,
-    "fields": { "landmark_id": "RAD-05", "name": "Styloid process", "bone": 24 }
+    "fields": { "landmark_id": "SAC-04", "name": "1st sacral body", "bone": 15 }
   },
   {
     "model": "api.landmark",
     "pk": 173,
-    "fields": {
-      "landmark_id": "RAD-06",
-      "name": "Distal articular surface",
-      "bone": 24
-    }
+    "fields": { "landmark_id": "SAC-05", "name": "2nd sacral body", "bone": 15 }
   },
   {
     "model": "api.landmark",
     "pk": 174,
-    "fields": { "landmark_id": "RAD-07", "name": "Oblique line", "bone": 24 }
+    "fields": {
+      "landmark_id": "SAC-06",
+      "name": "Sacral canal entrance",
+      "bone": 15
+    }
   },
   {
     "model": "api.landmark",
     "pk": 175,
     "fields": {
-      "landmark_id": "ULN-01",
-      "name": "Olecranon process",
-      "bone": 25
+      "landmark_id": "SAC-07",
+      "name": "Left superior articular process",
+      "bone": 15
     }
   },
   {
     "model": "api.landmark",
     "pk": 176,
-    "fields": { "landmark_id": "ULN-02", "name": "Trochlear notch", "bone": 25 }
+    "fields": {
+      "landmark_id": "SAC-08",
+      "name": "Right superior articular process",
+      "bone": 15
+    }
   },
   {
     "model": "api.landmark",
     "pk": 177,
     "fields": {
-      "landmark_id": "ULN-03",
-      "name": "Coronoid process",
-      "bone": 25
+      "landmark_id": "SAC-09",
+      "name": "Left auricular process",
+      "bone": 15
     }
   },
   {
     "model": "api.landmark",
     "pk": 178,
-    "fields": { "landmark_id": "ULN-04", "name": "Radial notch", "bone": 25 }
+    "fields": {
+      "landmark_id": "SAC-10",
+      "name": "Right auricular process",
+      "bone": 15
+    }
   },
   {
     "model": "api.landmark",
     "pk": 179,
-    "fields": { "landmark_id": "ULN-05", "name": "Ulnar head", "bone": 25 }
+    "fields": { "landmark_id": "SAC-11", "name": "Median crest", "bone": 15 }
   },
   {
     "model": "api.landmark",
     "pk": 180,
-    "fields": { "landmark_id": "ULN-06", "name": "Styloid process", "bone": 25 }
+    "fields": { "landmark_id": "SAC-12", "name": "3rd sacral body", "bone": 15 }
   },
   {
     "model": "api.landmark",
     "pk": 181,
-    "fields": { "landmark_id": "ULN-07", "name": "Supinator crest", "bone": 25 }
+    "fields": { "landmark_id": "SAC-13", "name": "4th sacral body", "bone": 15 }
   },
   {
     "model": "api.landmark",
     "pk": 182,
-    "fields": { "landmark_id": "MAN-01", "name": "Scaphoid", "bone": 26 }
+    "fields": { "landmark_id": "SAC-14", "name": "5th sacral body", "bone": 15 }
   },
   {
     "model": "api.landmark",
     "pk": 183,
-    "fields": { "landmark_id": "MAN-02", "name": "Lunate", "bone": 26 }
+    "fields": { "landmark_id": "SAC-15", "name": "Sacral hiatus", "bone": 15 }
   },
   {
     "model": "api.landmark",
     "pk": 184,
-    "fields": { "landmark_id": "MAN-03", "name": "Triquetral", "bone": 26 }
+    "fields": { "landmark_id": "SAC-16", "name": "Coccyx", "bone": 15 }
   },
   {
     "model": "api.landmark",
     "pk": 185,
-    "fields": { "landmark_id": "MAN-04", "name": "Pisiform", "bone": 26 }
+    "fields": { "landmark_id": "FEM-01", "name": "Head", "bone": 16 }
   },
   {
     "model": "api.landmark",
     "pk": 186,
-    "fields": { "landmark_id": "MAN-05", "name": "Trapezium", "bone": 26 }
+    "fields": { "landmark_id": "FEM-02", "name": "Neck", "bone": 16 }
   },
   {
     "model": "api.landmark",
     "pk": 187,
-    "fields": { "landmark_id": "MAN-06", "name": "Trapezoid", "bone": 26 }
+    "fields": {
+      "landmark_id": "FEM-03",
+      "name": "Greater trochanter",
+      "bone": 16
+    }
   },
   {
     "model": "api.landmark",
     "pk": 188,
-    "fields": { "landmark_id": "MAN-07", "name": "Capitate", "bone": 26 }
+    "fields": {
+      "landmark_id": "FEM-04",
+      "name": "Lesser trochanter",
+      "bone": 16
+    }
   },
   {
     "model": "api.landmark",
     "pk": 189,
-    "fields": { "landmark_id": "MAN-08", "name": "Hamate", "bone": 26 }
+    "fields": {
+      "landmark_id": "FEM-05",
+      "name": "Intertrochanteric crest",
+      "bone": 16
+    }
   },
   {
     "model": "api.landmark",
     "pk": 190,
-    "fields": { "landmark_id": "MAN-09", "name": "MC1 base", "bone": 27 }
+    "fields": {
+      "landmark_id": "FEM-06",
+      "name": "Gluteal tuberosity",
+      "bone": 16
+    }
   },
   {
     "model": "api.landmark",
     "pk": 191,
-    "fields": { "landmark_id": "MAN-10", "name": "MC1 head", "bone": 27 }
+    "fields": { "landmark_id": "FEM-07", "name": "Linea aspera", "bone": 16 }
   },
   {
     "model": "api.landmark",
     "pk": 192,
-    "fields": { "landmark_id": "MAN-11", "name": "MC2 base", "bone": 27 }
+    "fields": {
+      "landmark_id": "FEM-08",
+      "name": "Supracondylar lines",
+      "bone": 16
+    }
   },
   {
     "model": "api.landmark",
     "pk": 193,
-    "fields": { "landmark_id": "MAN-12", "name": "MC3 base", "bone": 27 }
+    "fields": {
+      "landmark_id": "FEM-09",
+      "name": "Intercondylar fossa",
+      "bone": 16
+    }
   },
   {
     "model": "api.landmark",
     "pk": 194,
-    "fields": { "landmark_id": "MAN-13", "name": "MC4 base", "bone": 27 }
+    "fields": { "landmark_id": "FEM-10", "name": "Medial condyle", "bone": 16 }
   },
   {
     "model": "api.landmark",
     "pk": 195,
-    "fields": { "landmark_id": "MAN-14", "name": "MC5 base", "bone": 27 }
+    "fields": { "landmark_id": "FEM-11", "name": "Lateral condyle", "bone": 16 }
   },
   {
     "model": "api.landmark",
     "pk": 196,
-    "fields": { "landmark_id": "PEL-01", "name": "Iliac crest", "bone": 28 }
+    "fields": {
+      "landmark_id": "FEM-12",
+      "name": "Patellar surface",
+      "bone": 16
+    }
   },
   {
     "model": "api.landmark",
     "pk": 197,
-    "fields": { "landmark_id": "PEL-02", "name": "Iliac tubercle", "bone": 28 }
+    "fields": { "landmark_id": "TIB-01", "name": "Lateral condyle", "bone": 17 }
   },
   {
     "model": "api.landmark",
     "pk": 198,
-    "fields": { "landmark_id": "PEL-03", "name": "Iliac fossa", "bone": 28 }
+    "fields": {
+      "landmark_id": "TIB-02",
+      "name": "Intercondylar eminence",
+      "bone": 17
+    }
   },
   {
     "model": "api.landmark",
     "pk": 199,
-    "fields": { "landmark_id": "PEL-04", "name": "ASIS", "bone": 28 }
+    "fields": { "landmark_id": "TIB-03", "name": "Medial condyle", "bone": 17 }
   },
   {
     "model": "api.landmark",
     "pk": 200,
-    "fields": { "landmark_id": "PEL-05", "name": "AIIS", "bone": 28 }
+    "fields": {
+      "landmark_id": "TIB-04",
+      "name": "Tibial tuberosity",
+      "bone": 17
+    }
   },
   {
     "model": "api.landmark",
     "pk": 201,
-    "fields": { "landmark_id": "PEL-06", "name": "PSIS", "bone": 28 }
+    "fields": { "landmark_id": "TIB-05", "name": "Proximal shaft", "bone": 17 }
   },
   {
     "model": "api.landmark",
     "pk": 202,
-    "fields": { "landmark_id": "PEL-07", "name": "PIIS", "bone": 28 }
+    "fields": { "landmark_id": "TIB-06", "name": "Distal shaft", "bone": 17 }
   },
   {
     "model": "api.landmark",
     "pk": 203,
     "fields": {
-      "landmark_id": "PEL-08",
-      "name": "Acetabulum (ischium)",
-      "bone": 28
+      "landmark_id": "TIB-07",
+      "name": "Medial malleolus",
+      "bone": 17
     }
   },
   {
     "model": "api.landmark",
     "pk": 204,
     "fields": {
-      "landmark_id": "PEL-09",
-      "name": "Acetabulum (pubis)",
-      "bone": 28
+      "landmark_id": "TIB-08",
+      "name": "Distal articular surface",
+      "bone": 17
     }
   },
   {
     "model": "api.landmark",
     "pk": 205,
-    "fields": {
-      "landmark_id": "PEL-10",
-      "name": "Acetabulum (ilium)",
-      "bone": 28
-    }
+    "fields": { "landmark_id": "FIB-01", "name": "Head", "bone": 18 }
   },
   {
     "model": "api.landmark",
     "pk": 206,
-    "fields": {
-      "landmark_id": "PEL-11",
-      "name": "Greater sciatic notch",
-      "bone": 28
-    }
+    "fields": { "landmark_id": "FIB-02", "name": "Shaft", "bone": 18 }
   },
   {
     "model": "api.landmark",
     "pk": 207,
     "fields": {
-      "landmark_id": "PEL-12",
-      "name": "Auricular surface",
-      "bone": 28
+      "landmark_id": "FIB-03",
+      "name": "Lateral malleolus",
+      "bone": 18
     }
   },
   {
     "model": "api.landmark",
     "pk": 208,
     "fields": {
-      "landmark_id": "PEL-13",
-      "name": "Retro-auricular area",
-      "bone": 28
+      "landmark_id": "FIB-04",
+      "name": "Distal articular surface",
+      "bone": 18
     }
   },
   {
     "model": "api.landmark",
     "pk": 209,
-    "fields": { "landmark_id": "PEL-14", "name": "Ischial spine", "bone": 28 }
+    "fields": { "landmark_id": "FIB-05", "name": "Neck", "bone": 18 }
   },
   {
     "model": "api.landmark",
     "pk": 210,
-    "fields": {
-      "landmark_id": "PEL-15",
-      "name": "Lesser sciatic notch",
-      "bone": 28
-    }
+    "fields": { "landmark_id": "PAT-01", "name": "Apex", "bone": 19 }
   },
   {
     "model": "api.landmark",
     "pk": 211,
-    "fields": {
-      "landmark_id": "PEL-16",
-      "name": "Ischial tuberosity",
-      "bone": 28
-    }
+    "fields": { "landmark_id": "PAT-02", "name": "Base", "bone": 19 }
   },
   {
     "model": "api.landmark",
     "pk": 212,
-    "fields": { "landmark_id": "PEL-17", "name": "Pubic symphysis", "bone": 28 }
+    "fields": { "landmark_id": "FOO-01", "name": "Head", "bone": 21 }
   },
   {
     "model": "api.landmark",
     "pk": 213,
-    "fields": {
-      "landmark_id": "PEL-18",
-      "name": "Ischio-pubic ramus",
-      "bone": 28
-    }
+    "fields": { "landmark_id": "FOO-02", "name": "Neck", "bone": 21 }
   },
   {
     "model": "api.landmark",
     "pk": 214,
-    "fields": {
-      "landmark_id": "PEL-19",
-      "name": "Obturator groove",
-      "bone": 28
-    }
+    "fields": { "landmark_id": "FOO-03", "name": "Trochlea", "bone": 21 }
   },
   {
     "model": "api.landmark",
     "pk": 215,
-    "fields": { "landmark_id": "PEL-20", "name": "Pubic tubercle", "bone": 28 }
+    "fields": {
+      "landmark_id": "FOO-04",
+      "name": "Posterior calcaneal surface",
+      "bone": 21
+    }
   },
   {
     "model": "api.landmark",
     "pk": 216,
     "fields": {
-      "landmark_id": "SAC-01",
-      "name": "Sacral promontory",
-      "bone": 29
+      "landmark_id": "FOO-05",
+      "name": "Anterior talar surface",
+      "bone": 22
     }
   },
   {
     "model": "api.landmark",
     "pk": 217,
-    "fields": { "landmark_id": "SAC-02", "name": "Left ala", "bone": 29 }
+    "fields": {
+      "landmark_id": "FOO-06",
+      "name": "Posterior talar surface",
+      "bone": 22
+    }
   },
   {
     "model": "api.landmark",
     "pk": 218,
-    "fields": { "landmark_id": "SAC-03", "name": "Right ala", "bone": 29 }
+    "fields": { "landmark_id": "FOO-07", "name": "Talar shelf", "bone": 22 }
   },
   {
     "model": "api.landmark",
     "pk": 219,
-    "fields": { "landmark_id": "SAC-04", "name": "1st sacral body", "bone": 29 }
+    "fields": {
+      "landmark_id": "FOO-08",
+      "name": "Calcaneal tubercle",
+      "bone": 22
+    }
   },
   {
     "model": "api.landmark",
     "pk": 220,
-    "fields": { "landmark_id": "SAC-05", "name": "2nd sacral body", "bone": 29 }
+    "fields": {
+      "landmark_id": "FOO-09",
+      "name": "Calcaneal tuberosity",
+      "bone": 22
+    }
   },
   {
     "model": "api.landmark",
     "pk": 221,
-    "fields": {
-      "landmark_id": "SAC-06",
-      "name": "Sacral canal entrance",
-      "bone": 29
-    }
+    "fields": { "landmark_id": "FOO-10", "name": "Cuboid", "bone": 20 }
   },
   {
     "model": "api.landmark",
     "pk": 222,
-    "fields": {
-      "landmark_id": "SAC-07",
-      "name": "Left superior articular process",
-      "bone": 29
-    }
+    "fields": { "landmark_id": "FOO-11", "name": "Navicular", "bone": 20 }
   },
   {
     "model": "api.landmark",
     "pk": 223,
     "fields": {
-      "landmark_id": "SAC-08",
-      "name": "Right superior articular process",
-      "bone": 29
+      "landmark_id": "FOO-12",
+      "name": "Medial cuneiform",
+      "bone": 20
     }
   },
   {
     "model": "api.landmark",
     "pk": 224,
     "fields": {
-      "landmark_id": "SAC-09",
-      "name": "Left auricular process",
-      "bone": 29
+      "landmark_id": "FOO-13",
+      "name": "Intermediate cuneiform",
+      "bone": 20
     }
   },
   {
     "model": "api.landmark",
     "pk": 225,
     "fields": {
-      "landmark_id": "SAC-10",
-      "name": "Right auricular process",
-      "bone": 29
+      "landmark_id": "FOO-14",
+      "name": "Lateral cuneiform",
+      "bone": 20
     }
   },
   {
     "model": "api.landmark",
     "pk": 226,
-    "fields": { "landmark_id": "SAC-11", "name": "Median crest", "bone": 29 }
+    "fields": { "landmark_id": "FOO-15", "name": "Base", "bone": 23 }
   },
   {
     "model": "api.landmark",
     "pk": 227,
-    "fields": { "landmark_id": "SAC-12", "name": "3rd sacral body", "bone": 29 }
+    "fields": { "landmark_id": "FOO-16", "name": "Shaft", "bone": 23 }
   },
   {
     "model": "api.landmark",
     "pk": 228,
-    "fields": { "landmark_id": "SAC-13", "name": "4th sacral body", "bone": 29 }
+    "fields": { "landmark_id": "FOO-17", "name": "Head", "bone": 23 }
   },
   {
     "model": "api.landmark",
     "pk": 229,
-    "fields": { "landmark_id": "SAC-14", "name": "5th sacral body", "bone": 29 }
+    "fields": { "landmark_id": "FOO-18", "name": "Base", "bone": 24 }
   },
   {
     "model": "api.landmark",
     "pk": 230,
-    "fields": { "landmark_id": "SAC-15", "name": "Sacral hiatus", "bone": 29 }
+    "fields": { "landmark_id": "FOO-19", "name": "Base", "bone": 25 }
   },
   {
     "model": "api.landmark",
     "pk": 231,
-    "fields": { "landmark_id": "SAC-16", "name": "Coccyx", "bone": 29 }
+    "fields": { "landmark_id": "FOO-20", "name": "Base", "bone": 26 }
   },
   {
     "model": "api.landmark",
     "pk": 232,
-    "fields": { "landmark_id": "FEM-01", "name": "Head", "bone": 30 }
+    "fields": { "landmark_id": "FOO-21", "name": "Base", "bone": 27 }
   },
   {
     "model": "api.landmark",
     "pk": 233,
-    "fields": { "landmark_id": "FEM-02", "name": "Neck", "bone": 30 }
+    "fields": { "landmark_id": "HYD-01", "name": "Body", "bone": 2 }
   },
   {
     "model": "api.landmark",
     "pk": 234,
     "fields": {
-      "landmark_id": "FEM-03",
-      "name": "Greater trochanter",
-      "bone": 30
+      "landmark_id": "HYD-02",
+      "name": "Left greater cornu",
+      "bone": 2
     }
   },
   {
     "model": "api.landmark",
     "pk": 235,
     "fields": {
-      "landmark_id": "FEM-04",
-      "name": "Lesser trochanter",
-      "bone": 30
+      "landmark_id": "HYD-03",
+      "name": "Right greater cornu",
+      "bone": 2
     }
   },
   {
     "model": "api.landmark",
     "pk": 236,
-    "fields": {
-      "landmark_id": "FEM-05",
-      "name": "Intertrochanteric crest",
-      "bone": 30
-    }
+    "fields": { "landmark_id": "LMV-01", "name": "Body", "bone": 28 }
   },
   {
     "model": "api.landmark",
     "pk": 237,
     "fields": {
-      "landmark_id": "FEM-06",
-      "name": "Gluteal tuberosity",
-      "bone": 30
+      "landmark_id": "LMV-02",
+      "name": "Left transverse process",
+      "bone": 28
     }
   },
   {
     "model": "api.landmark",
     "pk": 238,
-    "fields": { "landmark_id": "FEM-07", "name": "Linea aspera", "bone": 30 }
+    "fields": {
+      "landmark_id": "LMV-03",
+      "name": "Right transverse process",
+      "bone": 28
+    }
   },
   {
     "model": "api.landmark",
     "pk": 239,
-    "fields": {
-      "landmark_id": "FEM-08",
-      "name": "Supracondylar lines",
-      "bone": 30
-    }
+    "fields": { "landmark_id": "LMV-04", "name": "Left pedicle", "bone": 28 }
   },
   {
     "model": "api.landmark",
     "pk": 240,
-    "fields": {
-      "landmark_id": "FEM-09",
-      "name": "Intercondylar fossa",
-      "bone": 30
-    }
+    "fields": { "landmark_id": "LMV-05", "name": "Right pedicle", "bone": 28 }
   },
   {
     "model": "api.landmark",
     "pk": 241,
-    "fields": { "landmark_id": "FEM-10", "name": "Medial condyle", "bone": 30 }
+    "fields": {
+      "landmark_id": "LMV-06",
+      "name": "Left superior articular process",
+      "bone": 28
+    }
   },
   {
     "model": "api.landmark",
     "pk": 242,
-    "fields": { "landmark_id": "FEM-11", "name": "Lateral condyle", "bone": 30 }
+    "fields": {
+      "landmark_id": "LMV-07",
+      "name": "Right superior articular process",
+      "bone": 28
+    }
   },
   {
     "model": "api.landmark",
     "pk": 243,
     "fields": {
-      "landmark_id": "FEM-12",
-      "name": "Patellar surface",
-      "bone": 30
+      "landmark_id": "LMV-08",
+      "name": "Left inferior articular process",
+      "bone": 28
     }
   },
   {
     "model": "api.landmark",
     "pk": 244,
-    "fields": { "landmark_id": "FEM-13", "name": "Pectineal line", "bone": 30 }
+    "fields": {
+      "landmark_id": "LMV-09",
+      "name": "Right inferior articular process",
+      "bone": 28
+    }
   },
   {
     "model": "api.landmark",
     "pk": 245,
-    "fields": { "landmark_id": "TIB-01", "name": "Lateral condyle", "bone": 31 }
+    "fields": { "landmark_id": "LMV-10", "name": "Spinous process", "bone": 28 }
   },
   {
     "model": "api.landmark",
     "pk": 246,
-    "fields": {
-      "landmark_id": "TIB-02",
-      "name": "Intercondylar eminence",
-      "bone": 31
-    }
+    "fields": { "landmark_id": "LMV-11", "name": "Left lamina", "bone": 28 }
   },
   {
     "model": "api.landmark",
     "pk": 247,
-    "fields": { "landmark_id": "TIB-03", "name": "Medial condyle", "bone": 31 }
+    "fields": { "landmark_id": "LMV-12", "name": "Right lamina", "bone": 28 }
   },
   {
     "model": "api.landmark",
     "pk": 248,
-    "fields": {
-      "landmark_id": "TIB-04",
-      "name": "Tibial tuberosity",
-      "bone": 31
-    }
+    "fields": { "landmark_id": "THV-01", "name": "Body", "bone": 30 }
   },
   {
     "model": "api.landmark",
     "pk": 249,
     "fields": {
-      "landmark_id": "TIB-05",
-      "name": "Nutrient foramen",
-      "bone": 31
+      "landmark_id": "THV-02",
+      "name": "Left superior demifacet",
+      "bone": 30
     }
   },
   {
     "model": "api.landmark",
     "pk": 250,
     "fields": {
-      "landmark_id": "TIB-06",
-      "name": "Distal shaft (anterior margin)",
-      "bone": 31
+      "landmark_id": "THV-03",
+      "name": "Right superior demifacet",
+      "bone": 30
     }
   },
   {
     "model": "api.landmark",
     "pk": 251,
     "fields": {
-      "landmark_id": "TIB-07",
-      "name": "Medial malleolus",
-      "bone": 31
+      "landmark_id": "THV-04",
+      "name": "Left inferior demifacet",
+      "bone": 30
     }
   },
   {
     "model": "api.landmark",
     "pk": 252,
     "fields": {
-      "landmark_id": "TIB-08",
-      "name": "Distal articular surface",
-      "bone": 31
+      "landmark_id": "THV-05",
+      "name": "Right inferior demifacet",
+      "bone": 30
     }
   },
   {
     "model": "api.landmark",
     "pk": 253,
-    "fields": { "landmark_id": "FIB-01", "name": "Head", "bone": 32 }
+    "fields": {
+      "landmark_id": "THV-06",
+      "name": "Left transverse process",
+      "bone": 30
+    }
   },
   {
     "model": "api.landmark",
     "pk": 254,
-    "fields": { "landmark_id": "FIB-02", "name": "Neck", "bone": 32 }
+    "fields": {
+      "landmark_id": "THV-07",
+      "name": "Right transverse process",
+      "bone": 30
+    }
   },
   {
     "model": "api.landmark",
     "pk": 255,
-    "fields": { "landmark_id": "FIB-03", "name": "Shaft", "bone": 32 }
+    "fields": { "landmark_id": "THV-08", "name": "Left pedicle", "bone": 30 }
   },
   {
     "model": "api.landmark",
     "pk": 256,
-    "fields": {
-      "landmark_id": "FIB-04",
-      "name": "Distal articular surface",
-      "bone": 32
-    }
+    "fields": { "landmark_id": "THV-09", "name": "Right pedicle", "bone": 30 }
   },
   {
     "model": "api.landmark",
     "pk": 257,
     "fields": {
-      "landmark_id": "FIB-05",
-      "name": "Lateral malleolus",
-      "bone": 32
+      "landmark_id": "THV-10",
+      "name": "Left superior articular process",
+      "bone": 30
     }
   },
   {
     "model": "api.landmark",
     "pk": 258,
-    "fields": { "landmark_id": "PAT-01", "name": "Apex", "bone": 33 }
+    "fields": {
+      "landmark_id": "THV-11",
+      "name": "Right superior articular process",
+      "bone": 30
+    }
   },
   {
     "model": "api.landmark",
     "pk": 259,
-    "fields": { "landmark_id": "PAT-02", "name": "Base", "bone": 33 }
+    "fields": {
+      "landmark_id": "THV-12",
+      "name": "Left inferior articular process",
+      "bone": 30
+    }
   },
   {
     "model": "api.landmark",
     "pk": 260,
-    "fields": { "landmark_id": "PAT-03", "name": "Medial border", "bone": 33 }
+    "fields": {
+      "landmark_id": "THV-13",
+      "name": "Right inferior articular process",
+      "bone": 30
+    }
   },
   {
     "model": "api.landmark",
     "pk": 261,
-    "fields": { "landmark_id": "PAT-04", "name": "Lateral border", "bone": 33 }
+    "fields": {
+      "landmark_id": "THV-14",
+      "name": "Left transverse costal facet",
+      "bone": 30
+    }
   },
   {
     "model": "api.landmark",
     "pk": 262,
-    "fields": { "landmark_id": "FOO-01", "name": "Head", "bone": 35 }
+    "fields": {
+      "landmark_id": "THV-15",
+      "name": "Right transverse costal facet",
+      "bone": 30
+    }
   },
   {
     "model": "api.landmark",
     "pk": 263,
-    "fields": { "landmark_id": "FOO-02", "name": "Neck", "bone": 35 }
+    "fields": { "landmark_id": "THV-16", "name": "Spinous process", "bone": 30 }
   },
   {
     "model": "api.landmark",
     "pk": 264,
-    "fields": { "landmark_id": "FOO-03", "name": "Trochlea", "bone": 35 }
+    "fields": { "landmark_id": "THV-17", "name": "Left lamina", "bone": 30 }
   },
   {
     "model": "api.landmark",
     "pk": 265,
-    "fields": {
-      "landmark_id": "FOO-04",
-      "name": "Posterior calcaneal surface",
-      "bone": 35
-    }
+    "fields": { "landmark_id": "THV-18", "name": "Right lamina", "bone": 30 }
   },
   {
     "model": "api.landmark",
     "pk": 266,
-    "fields": {
-      "landmark_id": "FOO-05",
-      "name": "Anterior talar surface",
-      "bone": 36
-    }
+    "fields": { "landmark_id": "CRV-01", "name": "Body", "bone": 29 }
   },
   {
     "model": "api.landmark",
     "pk": 267,
     "fields": {
-      "landmark_id": "FOO-06",
-      "name": "Posterior talar surface",
-      "bone": 36
+      "landmark_id": "CRV-02",
+      "name": "Left transverse process",
+      "bone": 29
     }
   },
   {
     "model": "api.landmark",
     "pk": 268,
-    "fields": { "landmark_id": "FOO-07", "name": "Talar shelf", "bone": 36 }
+    "fields": {
+      "landmark_id": "CRV-03",
+      "name": "Right transverse process",
+      "bone": 29
+    }
   },
   {
     "model": "api.landmark",
     "pk": 269,
-    "fields": {
-      "landmark_id": "FOO-08",
-      "name": "Calcaneal tubercle",
-      "bone": 36
-    }
+    "fields": { "landmark_id": "CRV-04", "name": "Left pedicle", "bone": 29 }
   },
   {
     "model": "api.landmark",
     "pk": 270,
-    "fields": {
-      "landmark_id": "FOO-09",
-      "name": "Calcaneal tuberosity",
-      "bone": 36
-    }
+    "fields": { "landmark_id": "CRV-05", "name": "Right pedicle", "bone": 29 }
   },
   {
     "model": "api.landmark",
     "pk": 271,
-    "fields": { "landmark_id": "FOO-10", "name": "Cuboid", "bone": 34 }
+    "fields": {
+      "landmark_id": "CRV-06",
+      "name": "Left superior articular process",
+      "bone": 29
+    }
   },
   {
     "model": "api.landmark",
     "pk": 272,
-    "fields": { "landmark_id": "FOO-11", "name": "Navicular", "bone": 34 }
+    "fields": {
+      "landmark_id": "CRV-07",
+      "name": "Right superior articular process",
+      "bone": 29
+    }
   },
   {
     "model": "api.landmark",
     "pk": 273,
     "fields": {
-      "landmark_id": "FOO-12",
-      "name": "Medial cuneiform",
-      "bone": 34
+      "landmark_id": "CRV-08",
+      "name": "Left inferior articular process",
+      "bone": 29
     }
   },
   {
     "model": "api.landmark",
     "pk": 274,
     "fields": {
-      "landmark_id": "FOO-13",
-      "name": "Intermediate cuneiform",
-      "bone": 34
+      "landmark_id": "CRV-09",
+      "name": "Right inferior articular process",
+      "bone": 29
     }
   },
   {
     "model": "api.landmark",
     "pk": 275,
-    "fields": {
-      "landmark_id": "FOO-14",
-      "name": "Lateral cuneiform",
-      "bone": 34
-    }
+    "fields": { "landmark_id": "CRV-10", "name": "Spinous process", "bone": 29 }
   },
   {
     "model": "api.landmark",
     "pk": 276,
-    "fields": { "landmark_id": "FOO-15", "name": "Base", "bone": 37 }
+    "fields": { "landmark_id": "CRV-11", "name": "Left lamina", "bone": 29 }
   },
   {
     "model": "api.landmark",
     "pk": 277,
-    "fields": { "landmark_id": "FOO-16", "name": "Shaft", "bone": 37 }
-  },
-  {
-    "model": "api.landmark",
-    "pk": 278,
-    "fields": { "landmark_id": "FOO-17", "name": "Head", "bone": 37 }
-  },
-  {
-    "model": "api.landmark",
-    "pk": 279,
-    "fields": { "landmark_id": "FOO-18", "name": "Base", "bone": 38 }
-  },
-  {
-    "model": "api.landmark",
-    "pk": 280,
-    "fields": { "landmark_id": "FOO-19", "name": "Base", "bone": 39 }
-  },
-  {
-    "model": "api.landmark",
-    "pk": 281,
-    "fields": { "landmark_id": "FOO-20", "name": "Base", "bone": 40 }
-  },
-  {
-    "model": "api.landmark",
-    "pk": 282,
-    "fields": { "landmark_id": "FOO-21", "name": "Base", "bone": 41 }
+    "fields": { "landmark_id": "CRV-12", "name": "Right lamina", "bone": 29 }
   }
 ]
