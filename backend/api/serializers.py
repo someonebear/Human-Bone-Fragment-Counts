@@ -70,13 +70,12 @@ class EntrySerializer(serializers.ModelSerializer):
 
 
 class EntryDetailSerializer(serializers.ModelSerializer):
-    bone_name = serializers.CharField(read_only=True, source='bone.name')
     landmarks = serializers.StringRelatedField(many=True)
     meta = EntryMetaSerializer(read_only=True)
 
     class Meta:
         model = Entry
-        fields = ['acc_num', 'side', 'size', 'bone_name',
+        fields = ['acc_num', 'side', 'size', 'bone',
                   'generic', 'complete', 'landmarks', 'meta', 'body_part', 'ind']
 
 

@@ -40,7 +40,7 @@ class EntryList(generics.ListCreateAPIView):
     def create(self, request, *args, **kwargs):
         relative_landmarks = request.data['landmarks']
         landmarks_in_element = Landmark.objects.filter(
-            bone=request.data['bone'])
+            bone__name=request.data['bone'])
         absolute_landmarks = []
         for landmark in relative_landmarks:
             landmark_obj = landmarks_in_element[landmark-1]

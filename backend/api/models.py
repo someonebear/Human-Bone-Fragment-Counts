@@ -30,7 +30,7 @@ class Spit(models.Model):
 
 
 class Element(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=50, unique=True)
     # For big bones like the cranium with multiple parts and duplicate landmarks
     secondary = models.CharField(max_length=50, blank=True)
 
@@ -132,7 +132,8 @@ class Entry(models.Model):
     # TODO regex validator for this acc_num field
     acc_num = models.CharField(
         max_length=100, unique=True, blank=True, null=True)
-    bone = models.ForeignKey(Element, on_delete=models.RESTRICT)
+    bone = models.ForeignKey(Element, to_field='name',
+                             on_delete=models.RESTRICT)
     # TODO Add default as unsided
     side = models.CharField(choices=Side, max_length=20, default=Side.UNSIDED)
     size = models.CharField(choices=Size, max_length=50)
