@@ -20,7 +20,7 @@ class Spit(models.Model):
                              on_delete=models.RESTRICT)
 
     def __str__(self):
-        return f'{self.site.name}, {self.site.city} - Spit {self.number}'
+        return f'{self.site.name} - Spit {self.number}, PK: {self.pk}'
 
     class Meta:
         constraints = [
@@ -59,7 +59,7 @@ class Landmark(models.Model):
 class Individual(models.Model):
     ind_code = models.CharField(max_length=100, unique=True)
     meta = models.ForeignKey(
-        'EntryMeta', related_name='individuals', on_delete=models.RESTRICT)
+        'EntryMeta', related_name='individuals', on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.ind_code}'
@@ -70,7 +70,7 @@ class BodyPart(models.Model):
     ind = models.ForeignKey(
         Individual, related_name='body_parts', to_field='ind_code', on_delete=models.RESTRICT, blank=True, null=True)
     meta = models.ForeignKey(
-        'EntryMeta', related_name='body_parts', on_delete=models.RESTRICT)
+        'EntryMeta', related_name='body_parts', on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.bp_code}'
@@ -128,7 +128,7 @@ class Entry(models.Model):
     ind = models.ForeignKey(Individual, related_name='fragments',
                             to_field='ind_code', on_delete=models.RESTRICT, blank=True, null=True)
     meta = models.ForeignKey(
-        EntryMeta, related_name='fragments', on_delete=models.RESTRICT)
+        EntryMeta, related_name='fragments', on_delete=models.CASCADE)
     # TODO regex validator for this acc_num field
     acc_num = models.CharField(
         max_length=100, unique=True, blank=True, null=True)
@@ -140,7 +140,7 @@ class Entry(models.Model):
     generic = models.PositiveIntegerField(default=0)
     complete = models.PositiveIntegerField(validators=[MaxValueValidator(100)])
 
-    landmarks = models.ManyToManyField(Landmark)
+    landmarks = models.ManyToManyField(Landmark, blank=True)
     # logged_by = models.ForeignKey(User, on_delete=models.RESTRICT)    # TODO
     # TODO thumbnail
 

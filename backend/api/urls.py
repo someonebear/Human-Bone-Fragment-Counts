@@ -20,6 +20,8 @@ urlpatterns = [
     path('body-parts/<str:bp_code__iexact>/', views.BodyPartDetail.as_view()),
     path('mni/<int:site_pk>/', views.MNICalculation.as_view()),
     path('mni/<int:site_pk>/sex/', views.MNICalculation.as_view()),
+    path('sites/', views.SiteList.as_view()),
+    # path('sites/<int:pk>/', views.SiteDetail.as_view()),
 ]
 
 # Example usage - http http://127.0.0.1:8000/api/elements/ Accept:text/html

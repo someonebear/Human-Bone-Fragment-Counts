@@ -89,3 +89,11 @@ class EntryMetaDetailSerializer(serializers.ModelSerializer):
         model = EntryMeta
         fields = ['pk', 'age', 'sex', 'site',
                   'spit', 'individuals', 'body_parts', 'fragments', 'notes']
+
+
+class SiteSerializer(serializers.ModelSerializer):
+    spits = serializers.StringRelatedField(many=True)
+
+    class Meta:
+        model = Site
+        fields = ['pk', 'name', 'city', 'country', 'description', 'spits']

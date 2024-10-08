@@ -127,3 +127,8 @@ class MNICalculation(APIView):
         sex_split = bool(request.path.find("sex") != -1)
         calc = get_mne_by_spit(site, sex_split)
         return Response(calc)
+
+
+class SiteList(generics.ListCreateAPIView):
+    queryset = Site.objects.all()
+    serializer_class = SiteSerializer
