@@ -132,3 +132,8 @@ class MNICalculation(APIView):
 class SiteList(generics.ListCreateAPIView):
     queryset = Site.objects.all()
     serializer_class = SiteSerializer
+
+
+class SiteDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Site.objects.all()
+    serializer_class = SiteSerializer
