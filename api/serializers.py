@@ -65,7 +65,7 @@ class EntrySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Entry
-        fields = ['acc_num', 'bone', 'side', 'size',
+        fields = ['pk', 'acc_num', 'bone', 'side', 'size',
                   'generic', 'complete', 'landmarks', 'meta', 'body_part', 'ind']
 
 
@@ -75,7 +75,7 @@ class EntryDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Entry
-        fields = ['acc_num', 'side', 'size', 'bone',
+        fields = ['pk', 'acc_num', 'side', 'size', 'bone',
                   'generic', 'complete', 'landmarks', 'meta', 'body_part', 'ind']
 
 
@@ -92,7 +92,7 @@ class EntryMetaDetailSerializer(serializers.ModelSerializer):
 
 
 class SiteSerializer(serializers.ModelSerializer):
-    spits = serializers.StringRelatedField(many=True)
+    spits = serializers.StringRelatedField(many=True, read_only=True)
 
     class Meta:
         model = Site

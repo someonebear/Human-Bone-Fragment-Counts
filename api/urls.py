@@ -21,10 +21,7 @@ urlpatterns = [
     path('mni/<int:site_pk>/', views.MNICalculation.as_view()),
     path('mni/<int:site_pk>/sex/', views.MNICalculation.as_view()),
     path('sites/', views.SiteList.as_view()),
-    # path('sites/<int:pk>/', views.SiteDetail.as_view()),
+    path('sites/<int:pk>/', views.SiteDetail.as_view()),
 ]
 
-# Example usage - http http://127.0.0.1:8000/api/elements/ Accept:text/html
-# Example usage - http http://127.0.0.1:8000/api/elements.json
-# http POST http://127.0.0.1:8000/entries/ "Authorization: Token f2144eb3b28f79a5455621c4179336e3b07fa7cc" < api/test_entry.json --offline
 urlpatterns = format_suffix_patterns(urlpatterns)
