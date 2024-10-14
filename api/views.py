@@ -17,7 +17,6 @@ class ElementList(generics.ListCreateAPIView):
 class ElementDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Element.objects.all()
     serializer_class = ElementSerializer
-    lookup_field = 'name__iexact'
 
 
 class LandmarkList(generics.ListCreateAPIView):
@@ -28,7 +27,6 @@ class LandmarkList(generics.ListCreateAPIView):
 class LandmarkDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Landmark.objects.all()
     serializer_class = LandmarkSerializer
-    lookup_field = 'landmark_id__iexact'
 
 
 class EntryList(generics.ListCreateAPIView):
@@ -137,3 +135,13 @@ class SiteList(generics.ListCreateAPIView):
 class SiteDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Site.objects.all()
     serializer_class = SiteSerializer
+
+
+class SpitList(generics.ListCreateAPIView):
+    queryset = Spit.objects.all()
+    serializer_class = SpitSerializer
+
+
+class SpitDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Spit.objects.all()
+    serializer_class = SpitSerializer

@@ -2,151 +2,117 @@
   {
     "model": "api.element",
     "pk": 1,
-    "fields": { "name": "Cranium", "secondary": "" }
+    "fields": { "name": "Cranium" }
   },
   {
     "model": "api.element",
     "pk": 2,
-    "fields": { "name": "Hyoid", "secondary": "" }
+    "fields": { "name": "Hyoid" }
   },
   {
     "model": "api.element",
     "pk": 3,
-    "fields": { "name": "Mandible", "secondary": "" }
+    "fields": { "name": "Mandible" }
   },
   {
     "model": "api.element",
     "pk": 4,
-    "fields": { "name": "Atlas", "secondary": "" }
+    "fields": { "name": "Atlas" }
   },
   {
     "model": "api.element",
     "pk": 5,
-    "fields": { "name": "Axis", "secondary": "" }
+    "fields": { "name": "Axis" }
   },
   {
     "model": "api.element",
     "pk": 6,
-    "fields": { "name": "First Rib", "secondary": "" }
+    "fields": { "name": "First Rib" }
   },
   {
     "model": "api.element",
     "pk": 7,
-    "fields": { "name": "Sternum", "secondary": "" }
+    "fields": { "name": "Sternum" }
   },
   {
     "model": "api.element",
     "pk": 8,
-    "fields": { "name": "Clavicle", "secondary": "" }
+    "fields": { "name": "Clavicle" }
   },
   {
     "model": "api.element",
     "pk": 9,
-    "fields": { "name": "Scapula", "secondary": "" }
+    "fields": { "name": "Scapula" }
   },
   {
     "model": "api.element",
     "pk": 10,
-    "fields": { "name": "Humerus", "secondary": "" }
+    "fields": { "name": "Humerus" }
   },
   {
     "model": "api.element",
     "pk": 11,
-    "fields": { "name": "Radius", "secondary": "" }
+    "fields": { "name": "Radius" }
   },
   {
     "model": "api.element",
     "pk": 12,
-    "fields": { "name": "Ulna", "secondary": "" }
+    "fields": { "name": "Ulna" }
   },
   {
     "model": "api.element",
     "pk": 13,
-    "fields": { "name": "Hand", "secondary": "" }
+    "fields": { "name": "Hand" }
   },
   {
     "model": "api.element",
     "pk": 14,
-    "fields": { "name": "Pelvis", "secondary": "" }
+    "fields": { "name": "Pelvis" }
   },
   {
     "model": "api.element",
     "pk": 15,
-    "fields": { "name": "Sacrum", "secondary": "" }
+    "fields": { "name": "Sacrum" }
   },
   {
     "model": "api.element",
     "pk": 16,
-    "fields": { "name": "Femur", "secondary": "" }
+    "fields": { "name": "Femur" }
   },
   {
     "model": "api.element",
     "pk": 17,
-    "fields": { "name": "Tibia", "secondary": "" }
+    "fields": { "name": "Tibia" }
   },
   {
     "model": "api.element",
     "pk": 18,
-    "fields": { "name": "Fibula", "secondary": "" }
+    "fields": { "name": "Fibula" }
   },
   {
     "model": "api.element",
     "pk": 19,
-    "fields": { "name": "Patella", "secondary": "" }
+    "fields": { "name": "Patella" }
   },
   {
     "model": "api.element",
     "pk": 20,
-    "fields": { "name": "Foot", "secondary": "" }
+    "fields": { "name": "Foot" }
   },
+
   {
     "model": "api.element",
     "pk": 21,
-    "fields": { "name": "Talus", "secondary": "Foot" }
+    "fields": { "name": "Lumbar" }
   },
   {
     "model": "api.element",
     "pk": 22,
-    "fields": { "name": "Calcaneus", "secondary": "Foot" }
+    "fields": { "name": "Cervical" }
   },
   {
     "model": "api.element",
     "pk": 23,
-    "fields": { "name": "MT1", "secondary": "Foot" }
-  },
-  {
-    "model": "api.element",
-    "pk": 24,
-    "fields": { "name": "MT2", "secondary": "Foot" }
-  },
-  {
-    "model": "api.element",
-    "pk": 25,
-    "fields": { "name": "MT3", "secondary": "Foot" }
-  },
-  {
-    "model": "api.element",
-    "pk": 26,
-    "fields": { "name": "MT4", "secondary": "Foot" }
-  },
-  {
-    "model": "api.element",
-    "pk": 27,
-    "fields": { "name": "MT5", "secondary": "Foot" }
-  },
-  {
-    "model": "api.element",
-    "pk": 28,
-    "fields": { "name": "Lumbar", "secondary": "" }
-  },
-  {
-    "model": "api.element",
-    "pk": 29,
-    "fields": { "name": "Cervical", "secondary": "" }
-  },
-  {
-    "model": "api.element",
-    "pk": 30,
-    "fields": { "name": "Thoracic", "secondary": "" }
+    "fields": { "name": "Thoracic" }
   }
 ]

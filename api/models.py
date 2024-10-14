@@ -31,17 +31,9 @@ class Spit(models.Model):
 
 class Element(models.Model):
     name = models.CharField(max_length=50, unique=True)
-    # For big bones like the cranium with multiple parts and duplicate landmarks
-    secondary = models.CharField(max_length=50, blank=True)
 
     def __str__(self):
-        if self.secondary != "":
-            return f'{self.name} - {self.secondary}'
         return self.name
-
-    class Meta:
-        models.UniqueConstraint(
-            fields=['name', 'secondary'], name='unique_bone')
 
 
 class Landmark(models.Model):
@@ -50,7 +42,7 @@ class Landmark(models.Model):
     # Common name - e.g. "head", not "caput fibulae"
     name = models.CharField(max_length=100)
     bone = models.ForeignKey(
-        Element, related_name='landmarks', on_delete=models.CASCADE)
+        Element, to_field='name', related_name='landmarks', on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.landmark_id} - {self.name}'
