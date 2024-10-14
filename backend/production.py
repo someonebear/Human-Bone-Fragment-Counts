@@ -70,6 +70,10 @@ INSTALLED_APPS = [
     'corsheaders'
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "https://bodylogger-frontend.pages.dev"
+]
+
 DJOSER = {
     'USER_CREATE_PASSWORD_RETYPE': True,
 }
