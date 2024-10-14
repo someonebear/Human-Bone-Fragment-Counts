@@ -132,3 +132,14 @@ def change_codes(to_link, linker):
                     bp_obj.save(update_fields=['ind', 'meta'])
             return {"Success: body parts linked to individual"}
     return {"Error: Invalid linker format"}
+
+
+def get_spit_or_create(spit_num, site_num):
+    site_obj = Site.objects.get(pk=site_num)
+    try:
+        spit_obj = Spit.objects.filter(site=site_obj).get(number=spit_num)
+    except Spit.DoesNotExist:
+        spit_obj = None
+    if not spit_obj:
+        Spit.objects.create(number=spit_num, site=site_obj)
+    return
