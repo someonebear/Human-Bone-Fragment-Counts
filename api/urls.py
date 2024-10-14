@@ -24,6 +24,7 @@ urlpatterns = [
     path('sites/<int:pk>/', views.SiteDetail.as_view()),
     path('spits/', views.SpitList.as_view()),
     path('spits/<int:pk>/', views.SpitDetail.as_view()),
+    path('link/', views.LinkParts.as_view()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

@@ -99,3 +99,36 @@ def get_mne_by_spit(site, sex_split=False):
         site_total += out_dict[f'context_{spit.number}']["mni"]
     out_dict["site_mni"] = site_total
     return out_dict
+
+
+def change_codes(to_link, linker):
+    """Given a list of entries to link together, and an entry to link them under,
+        change corresponding codes to match linker
+
+        For example, given a list of fragments, and a body part to link them under,
+         change each fragment's "body_part" field to match linker
+
+        Given a list of body parts, and an individual to link them under,
+         change each body part's "ind" field to match linker.
+     """
+    if linker[:2] == "BP":
+        bp_obj = BodyPart.objects.get(bp_code=linker)
+        if bp_obj:
+            for entry in to_link:
+                entry_obj = Entry.objects.get(acc_num=entry)
+                if entry_obj:
+                    entry_obj.body_part = bp_obj
+                    entry_obj.meta = bp_obj.meta
+                    entry_obj.save(update_fields=['body_part', 'meta'])
+            return {"Success: entries linked to body part"}
+    elif linker[:3] == "IND":
+        ind_obj = Individual.objects.get(ind_code=linker)
+        if ind_obj:
+            for bp in to_link:
+                bp_obj = BodyPart.objects.get(bp_code=bp)
+                if bp_obj:
+                    bp_obj.ind = ind_obj
+                    bp_obj.meta = ind_obj.meta
+                    bp_obj.save(update_fields=['ind', 'meta'])
+            return {"Success: body parts linked to individual"}
+    return {"Error: Invalid linker format"}

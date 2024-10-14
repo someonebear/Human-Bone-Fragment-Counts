@@ -145,3 +145,11 @@ class SpitList(generics.ListCreateAPIView):
 class SpitDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Spit.objects.all()
     serializer_class = SpitSerializer
+
+
+class LinkParts(APIView):
+    def post(self, request, format=None):
+        toLink = request.data["toLink"]
+        linker = request.data["linker"]
+        message = change_codes(toLink, linker)
+        return Response(message)
