@@ -70,8 +70,10 @@ class EntryMetaList(generics.ListCreateAPIView):
         return super().get_serializer_class()
 
     def create(self, request, *args, **kwargs):
-        spit = request.data["spit"]
-        site = request.data["site"]
+        spit = request.data.get("spit", None)
+        site = request.data.get("site", None)
+        if spit and site:
+            get_spit_or_create(spit, site)
         get_spit_or_create(spit, site)
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -92,9 +94,9 @@ class EntryMetaDetail(generics.RetrieveUpdateDestroyAPIView):
     def update(self, request, *args, **kwargs):
         partial = kwargs.pop('partial', False)
         instance = self.get_object()
-        spit = request.data["spit"]
-        site = request.data["site"]
-        if spit:
+        spit = request.data.get("spit", None)
+        site = request.data.get("site", None)
+        if spit and site:
             get_spit_or_create(spit, site)
         serializer = self.get_serializer(
             instance, data=request.data, partial=partial)
